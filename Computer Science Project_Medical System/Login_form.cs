@@ -17,11 +17,6 @@ namespace Computer_Science_Project_Medical_System
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Login_form_Load(object sender, EventArgs e)
         {
 
@@ -29,6 +24,7 @@ namespace Computer_Science_Project_Medical_System
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // user Skip
             this.Hide();
             Patient_form test = new Patient_form();
             test.ShowDialog();
@@ -36,11 +32,35 @@ namespace Computer_Science_Project_Medical_System
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
+            //Doctor Skip
             this.Hide();
             Doctor_form doctor_frm = new Doctor_form();
             doctor_frm.ShowDialog();
+        }
+
+        public void button4_Click(object sender, EventArgs e)
+        {
+            //Login
+            if(usernameTxt.Text == "Test" && passwordTxt.Text == "Test")
+            {
+                //Replace with Database query for actual users from database
+                button1.PerformClick();
+            }
+            else if (usernameTxt.Text == "Test1" && passwordTxt.Text == "Test1")
+            {
+                //Test for patient login
+                button3.PerformClick();
+            }
+            else
+            {
+                usernameTxt.ForeColor = Color.Red;
+                passwordTxt.ForeColor = Color.Red;
+                usernameTxt.Text = "Incorrect";
+                passwordTxt.Text = "Incorrect";
+            }
+
         }
     }
 }

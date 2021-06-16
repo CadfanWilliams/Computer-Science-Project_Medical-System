@@ -20,6 +20,7 @@ namespace Computer_Science_Project_Medical_System
         private void btnExitDoctor_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
     }
 }

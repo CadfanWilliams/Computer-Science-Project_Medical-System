@@ -59,6 +59,7 @@
             // btnExitDoctor
             // 
             this.btnExitDoctor.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnExitDoctor.FlatAppearance.BorderSize = 0;
             this.btnExitDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitDoctor.Location = new System.Drawing.Point(970, 9);
             this.btnExitDoctor.Margin = new System.Windows.Forms.Padding(0);

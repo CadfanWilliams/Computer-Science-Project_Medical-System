@@ -25,6 +25,7 @@ namespace Computer_Science_Project_Medical_System
         private void btnExitPatient_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
     }
 }

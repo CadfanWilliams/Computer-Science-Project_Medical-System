@@ -74,6 +74,7 @@
             // btnExitPatient
             // 
             this.btnExitPatient.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnExitPatient.FlatAppearance.BorderSize = 0;
             this.btnExitPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitPatient.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExitPatient.Location = new System.Drawing.Point(970, 9);
