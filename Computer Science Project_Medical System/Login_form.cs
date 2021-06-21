@@ -52,6 +52,7 @@ namespace Computer_Science_Project_Medical_System
             {
                 //Test for patient login
                 button3.PerformClick();
+                //Server = localhost\SQLEXPRESS; Database = master; Trusted_Connection = True;
             }
             else
             {
