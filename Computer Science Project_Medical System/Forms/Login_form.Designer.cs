@@ -38,6 +38,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_info = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,6 +124,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_info);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.passwordTxt);
             this.panel1.Controls.Add(this.button3);
@@ -136,6 +138,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 351);
             this.panel1.TabIndex = 9;
+            // 
+            // btn_info
+            // 
+            this.btn_info.Location = new System.Drawing.Point(17, 287);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Size = new System.Drawing.Size(75, 23);
+            this.btn_info.TabIndex = 9;
+            this.btn_info.Text = "Info";
+            this.btn_info.UseVisualStyleBackColor = true;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
             // 
             // Login_form
             // 
@@ -165,6 +177,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_info;
     }
 }
 

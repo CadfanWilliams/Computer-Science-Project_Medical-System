@@ -1,4 +1,4 @@
-﻿namespace Computer_Science_Project_Medical_System
+namespace Computer_Science_Project_Medical_System
 {
     partial class Patient_form
     {

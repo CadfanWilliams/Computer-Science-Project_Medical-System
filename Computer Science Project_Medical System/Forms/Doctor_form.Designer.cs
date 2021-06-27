@@ -31,6 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExitDoctor = new System.Windows.Forms.Button();
+            this.btnViewPatients = new System.Windows.Forms.Button();
+            this.btnViewLoginInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -38,6 +40,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panel1.Controls.Add(this.btnViewLoginInfo);
+            this.panel1.Controls.Add(this.btnViewPatients);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -70,6 +74,26 @@
             this.btnExitDoctor.UseVisualStyleBackColor = false;
             this.btnExitDoctor.Click += new System.EventHandler(this.btnExitDoctor_Click);
             // 
+            // btnViewPatients
+            // 
+            this.btnViewPatients.Location = new System.Drawing.Point(0, 129);
+            this.btnViewPatients.Name = "btnViewPatients";
+            this.btnViewPatients.Size = new System.Drawing.Size(180, 38);
+            this.btnViewPatients.TabIndex = 3;
+            this.btnViewPatients.Text = "View Patients";
+            this.btnViewPatients.UseVisualStyleBackColor = true;
+            this.btnViewPatients.Click += new System.EventHandler(this.btnViewPatients_Click);
+            // 
+            // btnViewLoginInfo
+            // 
+            this.btnViewLoginInfo.Location = new System.Drawing.Point(0, 173);
+            this.btnViewLoginInfo.Name = "btnViewLoginInfo";
+            this.btnViewLoginInfo.Size = new System.Drawing.Size(180, 38);
+            this.btnViewLoginInfo.TabIndex = 4;
+            this.btnViewLoginInfo.Text = "View Login Table";
+            this.btnViewLoginInfo.UseVisualStyleBackColor = true;
+            this.btnViewLoginInfo.Click += new System.EventHandler(this.btnViewLoginInfo_Click);
+            // 
             // Doctor_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,5 +116,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnExitDoctor;
+        private System.Windows.Forms.Button btnViewPatients;
+        private System.Windows.Forms.Button btnViewLoginInfo;
     }
 }

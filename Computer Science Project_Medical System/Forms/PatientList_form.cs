@@ -21,7 +21,7 @@ namespace Computer_Science_Project_Medical_System
         {
             this.Validate();
             this.patient_tblBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet1);
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
 
         }
 
@@ -30,7 +30,7 @@ namespace Computer_Science_Project_Medical_System
             // TODO: This line of code loads data into the 'database1DataSet.Patient_tbl' table. You can move, or remove it, as needed.
             this.patient_tblTableAdapter.Fill(this.database1DataSet.Patient_tbl);
             // TODO: This line of code loads data into the 'database1DataSet1.Patient_tbl' table. You can move, or remove it, as needed.
-            this.patient_tblTableAdapter.Fill(this.database1DataSet1.Patient_tbl);
+            this.patient_tblTableAdapter.Fill(this.database1DataSet.Patient_tbl);
 
         }
 
@@ -40,6 +40,18 @@ namespace Computer_Science_Project_Medical_System
             this.patient_tblBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
 
+        }
+
+        private void genderCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(genderCheckBox.Checked == true)
+            {
+                genderCheckBox.Text = "F";
+            }
+            else
+            {
+                genderCheckBox.Text = "M";
+            }
         }
     }
 }

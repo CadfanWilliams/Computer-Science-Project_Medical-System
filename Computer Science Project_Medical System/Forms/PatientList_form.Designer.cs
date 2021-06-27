@@ -31,38 +31,38 @@ namespace Computer_Science_Project_Medical_System
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientList_form));
-            System.Windows.Forms.Label patient_IDLabel;
-            System.Windows.Forms.Label first_NameLabel;
-            System.Windows.Forms.Label second_NameLabel;
-            System.Windows.Forms.Label genderLabel;
-            System.Windows.Forms.Label phone_NumberLabel;
+            System.Windows.Forms.Label phone_NumberLabel1;
+            System.Windows.Forms.Label genderLabel1;
+            System.Windows.Forms.Label second_NameLabel1;
+            System.Windows.Forms.Label first_NameLabel1;
+            System.Windows.Forms.Label patient_IDLabel1;
             this.patient_tblBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.patient_tblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new Computer_Science_Project_Medical_System.Database1DataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.patient_tblBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.patient_tblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Computer_Science_Project_Medical_System.Database1DataSet();
             this.patient_tblTableAdapter = new Computer_Science_Project_Medical_System.Database1DataSetTableAdapters.Patient_tblTableAdapter();
             this.tableAdapterManager = new Computer_Science_Project_Medical_System.Database1DataSetTableAdapters.TableAdapterManager();
-            this.patient_IDTextBox = new System.Windows.Forms.TextBox();
-            this.first_NameTextBox = new System.Windows.Forms.TextBox();
-            this.second_NameTextBox = new System.Windows.Forms.TextBox();
-            this.genderTextBox = new System.Windows.Forms.TextBox();
-            this.phone_NumberTextBox = new System.Windows.Forms.TextBox();
-            patient_IDLabel = new System.Windows.Forms.Label();
-            first_NameLabel = new System.Windows.Forms.Label();
-            second_NameLabel = new System.Windows.Forms.Label();
-            genderLabel = new System.Windows.Forms.Label();
-            phone_NumberLabel = new System.Windows.Forms.Label();
+            this.phone_NumberTextBox1 = new System.Windows.Forms.TextBox();
+            this.genderCheckBox = new System.Windows.Forms.CheckBox();
+            this.second_NameTextBox1 = new System.Windows.Forms.TextBox();
+            this.first_NameTextBox1 = new System.Windows.Forms.TextBox();
+            this.patient_IDTextBox1 = new System.Windows.Forms.TextBox();
+            phone_NumberLabel1 = new System.Windows.Forms.Label();
+            genderLabel1 = new System.Windows.Forms.Label();
+            second_NameLabel1 = new System.Windows.Forms.Label();
+            first_NameLabel1 = new System.Windows.Forms.Label();
+            patient_IDLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.patient_tblBindingNavigator)).BeginInit();
             this.patient_tblBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patient_tblBindingSource)).BeginInit();
@@ -95,9 +95,44 @@ namespace Computer_Science_Project_Medical_System
             this.patient_tblBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.patient_tblBindingNavigator.Name = "patient_tblBindingNavigator";
             this.patient_tblBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.patient_tblBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.patient_tblBindingNavigator.Size = new System.Drawing.Size(364, 25);
             this.patient_tblBindingNavigator.TabIndex = 0;
             this.patient_tblBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // patient_tblBindingSource
+            // 
+            this.patient_tblBindingSource.DataMember = "Patient_tbl";
+            this.patient_tblBindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -126,22 +161,14 @@ namespace Computer_Science_Project_Medical_System
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -164,26 +191,8 @@ namespace Computer_Science_Project_Medical_System
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // patient_tblBindingNavigatorSaveItem
             // 
@@ -193,16 +202,6 @@ namespace Computer_Science_Project_Medical_System
             this.patient_tblBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.patient_tblBindingNavigatorSaveItem.Text = "Save Data";
             this.patient_tblBindingNavigatorSaveItem.Click += new System.EventHandler(this.patient_tblBindingNavigatorSaveItem_Click_1);
-            // 
-            // patient_tblBindingSource
-            // 
-            this.patient_tblBindingSource.DataMember = "Patient_tbl";
-            this.patient_tblBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // patient_tblTableAdapter
             // 
@@ -214,106 +213,109 @@ namespace Computer_Science_Project_Medical_System
             this.tableAdapterManager.Patient_tblTableAdapter = this.patient_tblTableAdapter;
             this.tableAdapterManager.UpdateOrder = Computer_Science_Project_Medical_System.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // patient_IDLabel
+            // phone_NumberTextBox1
             // 
-            patient_IDLabel.AutoSize = true;
-            patient_IDLabel.Location = new System.Drawing.Point(23, 57);
-            patient_IDLabel.Name = "patient_IDLabel";
-            patient_IDLabel.Size = new System.Drawing.Size(57, 13);
-            patient_IDLabel.TabIndex = 1;
-            patient_IDLabel.Text = "Patient ID:";
+            this.phone_NumberTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "Phone Number", true));
+            this.phone_NumberTextBox1.Location = new System.Drawing.Point(99, 144);
+            this.phone_NumberTextBox1.Name = "phone_NumberTextBox1";
+            this.phone_NumberTextBox1.Size = new System.Drawing.Size(104, 20);
+            this.phone_NumberTextBox1.TabIndex = 20;
             // 
-            // patient_IDTextBox
+            // phone_NumberLabel1
             // 
-            this.patient_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "Patient ID", true));
-            this.patient_IDTextBox.Location = new System.Drawing.Point(110, 54);
-            this.patient_IDTextBox.Name = "patient_IDTextBox";
-            this.patient_IDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.patient_IDTextBox.TabIndex = 2;
+            phone_NumberLabel1.AutoSize = true;
+            phone_NumberLabel1.Location = new System.Drawing.Point(12, 147);
+            phone_NumberLabel1.Name = "phone_NumberLabel1";
+            phone_NumberLabel1.Size = new System.Drawing.Size(81, 13);
+            phone_NumberLabel1.TabIndex = 19;
+            phone_NumberLabel1.Text = "Phone Number:";
             // 
-            // first_NameLabel
+            // genderCheckBox
             // 
-            first_NameLabel.AutoSize = true;
-            first_NameLabel.Location = new System.Drawing.Point(23, 83);
-            first_NameLabel.Name = "first_NameLabel";
-            first_NameLabel.Size = new System.Drawing.Size(60, 13);
-            first_NameLabel.TabIndex = 3;
-            first_NameLabel.Text = "First Name:";
+            this.genderCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.patient_tblBindingSource, "Gender", true));
+            this.genderCheckBox.Location = new System.Drawing.Point(99, 114);
+            this.genderCheckBox.Name = "genderCheckBox";
+            this.genderCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.genderCheckBox.TabIndex = 18;
+            this.genderCheckBox.Text = "M";
+            this.genderCheckBox.UseVisualStyleBackColor = true;
+            this.genderCheckBox.CheckedChanged += new System.EventHandler(this.genderCheckBox_CheckedChanged);
             // 
-            // first_NameTextBox
+            // genderLabel1
             // 
-            this.first_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "First Name", true));
-            this.first_NameTextBox.Location = new System.Drawing.Point(110, 80);
-            this.first_NameTextBox.Name = "first_NameTextBox";
-            this.first_NameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.first_NameTextBox.TabIndex = 4;
+            genderLabel1.AutoSize = true;
+            genderLabel1.Location = new System.Drawing.Point(12, 119);
+            genderLabel1.Name = "genderLabel1";
+            genderLabel1.Size = new System.Drawing.Size(45, 13);
+            genderLabel1.TabIndex = 17;
+            genderLabel1.Text = "Gender:";
             // 
-            // second_NameLabel
+            // second_NameTextBox1
             // 
-            second_NameLabel.AutoSize = true;
-            second_NameLabel.Location = new System.Drawing.Point(23, 109);
-            second_NameLabel.Name = "second_NameLabel";
-            second_NameLabel.Size = new System.Drawing.Size(78, 13);
-            second_NameLabel.TabIndex = 5;
-            second_NameLabel.Text = "Second Name:";
+            this.second_NameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "Second Name", true));
+            this.second_NameTextBox1.Location = new System.Drawing.Point(99, 88);
+            this.second_NameTextBox1.Name = "second_NameTextBox1";
+            this.second_NameTextBox1.Size = new System.Drawing.Size(104, 20);
+            this.second_NameTextBox1.TabIndex = 16;
             // 
-            // second_NameTextBox
+            // second_NameLabel1
             // 
-            this.second_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "Second Name", true));
-            this.second_NameTextBox.Location = new System.Drawing.Point(110, 106);
-            this.second_NameTextBox.Name = "second_NameTextBox";
-            this.second_NameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.second_NameTextBox.TabIndex = 6;
+            second_NameLabel1.AutoSize = true;
+            second_NameLabel1.Location = new System.Drawing.Point(12, 91);
+            second_NameLabel1.Name = "second_NameLabel1";
+            second_NameLabel1.Size = new System.Drawing.Size(78, 13);
+            second_NameLabel1.TabIndex = 15;
+            second_NameLabel1.Text = "Second Name:";
             // 
-            // genderLabel
+            // first_NameTextBox1
             // 
-            genderLabel.AutoSize = true;
-            genderLabel.Location = new System.Drawing.Point(23, 135);
-            genderLabel.Name = "genderLabel";
-            genderLabel.Size = new System.Drawing.Size(45, 13);
-            genderLabel.TabIndex = 7;
-            genderLabel.Text = "Gender:";
+            this.first_NameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "First Name", true));
+            this.first_NameTextBox1.Location = new System.Drawing.Point(99, 62);
+            this.first_NameTextBox1.Name = "first_NameTextBox1";
+            this.first_NameTextBox1.Size = new System.Drawing.Size(104, 20);
+            this.first_NameTextBox1.TabIndex = 14;
             // 
-            // genderTextBox
+            // first_NameLabel1
             // 
-            this.genderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "Gender", true));
-            this.genderTextBox.Location = new System.Drawing.Point(110, 132);
-            this.genderTextBox.Name = "genderTextBox";
-            this.genderTextBox.Size = new System.Drawing.Size(100, 20);
-            this.genderTextBox.TabIndex = 8;
+            first_NameLabel1.AutoSize = true;
+            first_NameLabel1.Location = new System.Drawing.Point(12, 65);
+            first_NameLabel1.Name = "first_NameLabel1";
+            first_NameLabel1.Size = new System.Drawing.Size(60, 13);
+            first_NameLabel1.TabIndex = 13;
+            first_NameLabel1.Text = "First Name:";
             // 
-            // phone_NumberLabel
+            // patient_IDTextBox1
             // 
-            phone_NumberLabel.AutoSize = true;
-            phone_NumberLabel.Location = new System.Drawing.Point(23, 161);
-            phone_NumberLabel.Name = "phone_NumberLabel";
-            phone_NumberLabel.Size = new System.Drawing.Size(81, 13);
-            phone_NumberLabel.TabIndex = 9;
-            phone_NumberLabel.Text = "Phone Number:";
+            this.patient_IDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "Patient ID", true));
+            this.patient_IDTextBox1.Location = new System.Drawing.Point(99, 36);
+            this.patient_IDTextBox1.Name = "patient_IDTextBox1";
+            this.patient_IDTextBox1.Size = new System.Drawing.Size(104, 20);
+            this.patient_IDTextBox1.TabIndex = 12;
             // 
-            // phone_NumberTextBox
+            // patient_IDLabel1
             // 
-            this.phone_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patient_tblBindingSource, "Phone Number", true));
-            this.phone_NumberTextBox.Location = new System.Drawing.Point(110, 158);
-            this.phone_NumberTextBox.Name = "phone_NumberTextBox";
-            this.phone_NumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.phone_NumberTextBox.TabIndex = 10;
+            patient_IDLabel1.AutoSize = true;
+            patient_IDLabel1.Location = new System.Drawing.Point(12, 39);
+            patient_IDLabel1.Name = "patient_IDLabel1";
+            patient_IDLabel1.Size = new System.Drawing.Size(57, 13);
+            patient_IDLabel1.TabIndex = 11;
+            patient_IDLabel1.Text = "Patient ID:";
             // 
             // PatientList_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 494);
-            this.Controls.Add(patient_IDLabel);
-            this.Controls.Add(this.patient_IDTextBox);
-            this.Controls.Add(first_NameLabel);
-            this.Controls.Add(this.first_NameTextBox);
-            this.Controls.Add(second_NameLabel);
-            this.Controls.Add(this.second_NameTextBox);
-            this.Controls.Add(genderLabel);
-            this.Controls.Add(this.genderTextBox);
-            this.Controls.Add(phone_NumberLabel);
-            this.Controls.Add(this.phone_NumberTextBox);
+            this.ClientSize = new System.Drawing.Size(364, 273);
+            this.Controls.Add(patient_IDLabel1);
+            this.Controls.Add(this.patient_IDTextBox1);
+            this.Controls.Add(first_NameLabel1);
+            this.Controls.Add(this.first_NameTextBox1);
+            this.Controls.Add(second_NameLabel1);
+            this.Controls.Add(this.second_NameTextBox1);
+            this.Controls.Add(genderLabel1);
+            this.Controls.Add(this.genderCheckBox);
+            this.Controls.Add(phone_NumberLabel1);
+            this.Controls.Add(this.phone_NumberTextBox1);
             this.Controls.Add(this.patient_tblBindingNavigator);
             this.Name = "PatientList_form";
             this.Text = "PatientList_form";
@@ -347,10 +349,10 @@ namespace Computer_Science_Project_Medical_System
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton patient_tblBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox patient_IDTextBox;
-        private System.Windows.Forms.TextBox first_NameTextBox;
-        private System.Windows.Forms.TextBox second_NameTextBox;
-        private System.Windows.Forms.TextBox genderTextBox;
-        private System.Windows.Forms.TextBox phone_NumberTextBox;
+        private System.Windows.Forms.TextBox phone_NumberTextBox1;
+        private System.Windows.Forms.CheckBox genderCheckBox;
+        private System.Windows.Forms.TextBox second_NameTextBox1;
+        private System.Windows.Forms.TextBox first_NameTextBox1;
+        private System.Windows.Forms.TextBox patient_IDTextBox1;
     }
 }
