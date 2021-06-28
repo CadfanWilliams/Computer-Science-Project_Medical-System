@@ -23,16 +23,8 @@ namespace Computer_Science_Project_Medical_System
             Application.Exit();
         }
 
-        private void btnViewPatients_Click(object sender, EventArgs e)
-        {
-            PatientList_form PTL = new PatientList_form();
-            PTL.ShowDialog();
-        }
 
-        private void btnViewLoginInfo_Click(object sender, EventArgs e)
-        {
-            LoginInfo_form logininfoform = new LoginInfo_form();
-            logininfoform.ShowDialog();
-        }
+
+
     }
 }

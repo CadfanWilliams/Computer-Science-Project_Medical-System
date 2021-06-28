@@ -61,27 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Database1DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Doctor_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Doctor_form.Designer.cs">
       <DependentUpon>Doctor_form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PatientList_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PatientList_form.Designer.cs">
-      <DependentUpon>PatientList_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login_form.cs">
       <SubType>Form</SubType>
@@ -95,28 +79,16 @@
     <Compile Include="Forms\Patient_form.designer.cs">
       <DependentUpon>Patient_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginInfo_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoginInfo_form.Designer.cs">
-      <DependentUpon>LoginInfo_form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Doctor_form.resx">
       <DependentUpon>Doctor_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PatientList_form.resx">
-      <DependentUpon>PatientList_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Patient_form.resx">
       <DependentUpon>Patient_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginInfo_form.resx">
-      <DependentUpon>LoginInfo_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,28 +100,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Database1DataSet.xsc">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database1DataSet.xss">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet1.xsc">
-      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database1DataSet1.xss">
-      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -171,15 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\doctor_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

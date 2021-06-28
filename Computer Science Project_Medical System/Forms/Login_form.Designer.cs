@@ -33,12 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.doctorBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.patientBtn = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_info = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,15 +82,15 @@
             this.passwordTxt.Size = new System.Drawing.Size(100, 20);
             this.passwordTxt.TabIndex = 4;
             // 
-            // button1
+            // doctorBtn
             // 
-            this.button1.Location = new System.Drawing.Point(260, 316);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Admin";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.doctorBtn.Location = new System.Drawing.Point(260, 316);
+            this.doctorBtn.Name = "doctorBtn";
+            this.doctorBtn.Size = new System.Drawing.Size(75, 23);
+            this.doctorBtn.TabIndex = 5;
+            this.doctorBtn.Text = "Doctor Skip";
+            this.doctorBtn.UseVisualStyleBackColor = true;
+            this.doctorBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -102,15 +101,15 @@
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // patientBtn
             // 
-            this.button3.Location = new System.Drawing.Point(17, 316);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "User";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.patientBtn.Location = new System.Drawing.Point(17, 316);
+            this.patientBtn.Name = "patientBtn";
+            this.patientBtn.Size = new System.Drawing.Size(75, 23);
+            this.patientBtn.TabIndex = 7;
+            this.patientBtn.Text = "Patient Skip";
+            this.patientBtn.UseVisualStyleBackColor = true;
+            this.patientBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // loginBtn
             // 
@@ -120,14 +119,12 @@
             this.loginBtn.TabIndex = 8;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_info);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.doctorBtn);
             this.panel1.Controls.Add(this.passwordTxt);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.patientBtn);
             this.panel1.Controls.Add(this.usernameTxt);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.loginBtn);
@@ -138,16 +135,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 351);
             this.panel1.TabIndex = 9;
-            // 
-            // btn_info
-            // 
-            this.btn_info.Location = new System.Drawing.Point(17, 287);
-            this.btn_info.Name = "btn_info";
-            this.btn_info.Size = new System.Drawing.Size(75, 23);
-            this.btn_info.TabIndex = 9;
-            this.btn_info.Text = "Info";
-            this.btn_info.UseVisualStyleBackColor = true;
-            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
             // 
             // Login_form
             // 
@@ -172,12 +159,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox usernameTxt;
         private System.Windows.Forms.TextBox passwordTxt;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button doctorBtn;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button patientBtn;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_info;
     }
 }
 
