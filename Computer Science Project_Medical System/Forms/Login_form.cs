@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Computer_Science_Project_Medical_System
 {
-    public partial class Login_form : Form
+    public partial class frmLogin : Form
     {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
-        public Login_form()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace Computer_Science_Project_Medical_System
         {
             // user Skip
             this.Hide();
-            Patient_form test = new Patient_form();
+            frmPatient test = new frmPatient();
             test.ShowDialog();
             
 
@@ -38,7 +38,7 @@ namespace Computer_Science_Project_Medical_System
         {
             //Doctor Skip
             this.Hide();
-            Doctor_form doctor_frm = new Doctor_form();
+            frmDoctor doctor_frm = new frmDoctor();
             doctor_frm.ShowDialog();
         }
 

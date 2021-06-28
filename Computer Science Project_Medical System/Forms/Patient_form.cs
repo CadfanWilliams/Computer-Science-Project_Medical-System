@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Computer_Science_Project_Medical_System
 {
-    public partial class Patient_form : Form
+    public partial class frmPatient : Form
     {
-        public Patient_form()
+        public frmPatient()
         {
             InitializeComponent();
         }

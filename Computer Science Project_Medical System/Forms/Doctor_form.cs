@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Computer_Science_Project_Medical_System
 {
-    public partial class Doctor_form : Form
+    public partial class frmDoctor : Form
     {
-        public Doctor_form()
+        public frmDoctor()
         {
             InitializeComponent();
         }

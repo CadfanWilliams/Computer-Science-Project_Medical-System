@@ -1,6 +1,6 @@
 ﻿namespace Computer_Science_Project_Medical_System
 {
-    partial class Doctor_form
+    partial class frmDoctor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDoctor1 = new System.Windows.Forms.Panel();
             this.btnExitDoctor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlDoctor1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 600);
-            this.panel1.TabIndex = 0;
+            this.pnlDoctor1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pnlDoctor1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlDoctor1.Location = new System.Drawing.Point(0, 0);
+            this.pnlDoctor1.Name = "pnlDoctor1";
+            this.pnlDoctor1.Size = new System.Drawing.Size(180, 600);
+            this.pnlDoctor1.TabIndex = 0;
             // 
             // btnExitDoctor
             // 
@@ -55,16 +55,17 @@
             this.btnExitDoctor.UseVisualStyleBackColor = false;
             this.btnExitDoctor.Click += new System.EventHandler(this.btnExitDoctor_Click);
             // 
-            // Doctor_form
+            // frmDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.btnExitDoctor);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlDoctor1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Doctor_form";
+            this.Name = "frmDoctor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Doctor_form";
             this.ResumeLayout(false);
 
@@ -72,7 +73,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlDoctor1;
         private System.Windows.Forms.Button btnExitDoctor;
         private System.Windows.Forms.Button btnViewPatients;
         private System.Windows.Forms.Button btnViewLoginInfo;

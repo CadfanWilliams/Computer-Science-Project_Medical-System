@@ -16,7 +16,7 @@ namespace Computer_Science_Project_Medical_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_form());
+            Application.Run(new frmLogin());
         }
     }
 }
