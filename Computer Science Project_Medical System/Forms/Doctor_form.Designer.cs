@@ -75,7 +75,5 @@
 
         private System.Windows.Forms.Panel pnlDoctor1;
         private System.Windows.Forms.Button btnExitDoctor;
-        private System.Windows.Forms.Button btnViewPatients;
-        private System.Windows.Forms.Button btnViewLoginInfo;
     }
 }

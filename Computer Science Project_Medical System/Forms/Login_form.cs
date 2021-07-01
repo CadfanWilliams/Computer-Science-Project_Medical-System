@@ -13,7 +13,7 @@ namespace Computer_Science_Project_Medical_System
 {
     public partial class frmLogin : Form
     {
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
+        
         public frmLogin()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Computer_Science_Project_Medical_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // user Skip
+            //Patient Skip
             this.Hide();
             frmPatient test = new frmPatient();
             test.ShowDialog();
