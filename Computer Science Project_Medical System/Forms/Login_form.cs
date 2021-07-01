@@ -42,21 +42,37 @@ namespace Computer_Science_Project_Medical_System
             string login = "SELECT * FROM tbl_users WHERE username = '" + txtUsername.Text + "' and password= '" + txtPassword.Text + "'";
             cmd = new OleDbCommand(login, con);
             OleDbDataReader dr = cmd.ExecuteReader();
+            string usertype;
+            while (dr.Read())
+            {
+                usertype = dr.GetString(2);
+                if (usertype == "Patient")
+                {
+                    new frmPatient().Show();
+                    this.Hide();
+                  
+                }
+                else if (usertype == "Doctor")
+                {
+                    frmDoctor doc = new frmDoctor();
+                    doc.Show();
+                    this.Hide();
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Login", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtUsername.Focus();
+                    
+                }
+                
+            }
+            dr.Close();
 
-            if(dr.Read() == true)
-            {
-                new frmPatient().Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Login", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtUsername.Focus();
-            }
+            
         }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtUsername.Text = "";
@@ -84,6 +100,7 @@ namespace Computer_Science_Project_Medical_System
             frm.Show();
             this.Hide();
         }
+        
     }
 }
 
