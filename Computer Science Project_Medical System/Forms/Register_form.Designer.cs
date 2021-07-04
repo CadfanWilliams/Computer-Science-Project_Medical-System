@@ -41,6 +41,7 @@ namespace Computer_Science_Project_Medical_System.Forms
             this.btnClear = new System.Windows.Forms.Button();
             this.txtAlready = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.checkbxDoctor = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -180,12 +181,24 @@ namespace Computer_Science_Project_Medical_System.Forms
             this.label2.Text = "Back to LOGIN";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // checkbxDoctor
+            // 
+            this.checkbxDoctor.AutoSize = true;
+            this.checkbxDoctor.Location = new System.Drawing.Point(33, 294);
+            this.checkbxDoctor.Name = "checkbxDoctor";
+            this.checkbxDoctor.Size = new System.Drawing.Size(75, 21);
+            this.checkbxDoctor.TabIndex = 6;
+            this.checkbxDoctor.Text = "Doctor?";
+            this.checkbxDoctor.UseVisualStyleBackColor = true;
+            this.checkbxDoctor.CheckedChanged += new System.EventHandler(this.checkbxDoctor_CheckedChanged);
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 544);
+            this.Controls.Add(this.checkbxDoctor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAlready);
             this.Controls.Add(this.btnClear);
@@ -224,5 +237,6 @@ namespace Computer_Science_Project_Medical_System.Forms
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label txtAlready;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkbxDoctor;
     }
 }

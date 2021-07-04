@@ -17,7 +17,8 @@ namespace Computer_Science_Project_Medical_System.Forms
         {
             InitializeComponent();
         }
-        
+        //string for doctor
+        public string UserType = "Patient";
         //Connection to database
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
         OleDbCommand cmd = new OleDbCommand();
@@ -31,8 +32,10 @@ namespace Computer_Science_Project_Medical_System.Forms
             }
             else if (txtPassword.Text == txtComPassword.Text)
             {
+                
                 con.Open();
-                string register = "INSERT INTO tbl_users VALUES ('"+ txtUsername.Text +"','" + txtPassword.Text + "')";
+                string register = "INSERT INTO tbl_users VALUES ('"+ txtUsername.Text +"','" + txtPassword.Text + "','"+ UserType +"')";
+
                 cmd = new OleDbCommand(register, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -78,6 +81,18 @@ namespace Computer_Science_Project_Medical_System.Forms
         {
             new frmLogin().Show();
             this.Hide();
+        }
+
+        private void checkbxDoctor_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkbxDoctor.Checked == true)
+            {
+                UserType = "Doctor";
+            }
+            else
+            {
+                UserType = "Patient";
+            }
         }
     }
 }
