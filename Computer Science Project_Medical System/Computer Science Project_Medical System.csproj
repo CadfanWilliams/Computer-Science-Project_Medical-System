@@ -85,6 +85,7 @@
     <Compile Include="Forms\Register_form.Designer.cs">
       <DependentUpon>Register_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Doctor_form.resx">

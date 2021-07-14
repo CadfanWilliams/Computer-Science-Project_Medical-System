@@ -88,7 +88,7 @@
             // txtAlready
             // 
             this.txtAlready.AutoSize = true;
-            this.txtAlready.Location = new System.Drawing.Point(63, 368);
+            this.txtAlready.Location = new System.Drawing.Point(71, 368);
             this.txtAlready.Name = "txtAlready";
             this.txtAlready.Size = new System.Drawing.Size(147, 17);
             this.txtAlready.TabIndex = 19;

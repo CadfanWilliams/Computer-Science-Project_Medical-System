@@ -14,9 +14,9 @@ using Computer_Science_Project_Medical_System.Forms;
 
 namespace Computer_Science_Project_Medical_System
 {
+    
     public partial class frmLogin : Form
     {
-        
         public frmLogin()
         {
             InitializeComponent();
@@ -45,10 +45,11 @@ namespace Computer_Science_Project_Medical_System
             string usertype;
             while (dr.Read())
             {
-                usertype = dr.GetString(2);
+                usertype = dr.GetString(3);
+                int userid2 = dr.GetInt32(0);
                 if (usertype == "Patient")
                 {
-                    new frmPatient().Show();
+                    new frmPatient(userid2).Show();
                     this.Hide();
                   
                 }
@@ -96,7 +97,8 @@ namespace Computer_Science_Project_Medical_System
 
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
-            frmPatient frm = new frmPatient();
+           
+            frmPatient frm = new frmPatient(3);
             frm.Show();
             this.Hide();
         }

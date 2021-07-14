@@ -184,9 +184,10 @@ namespace Computer_Science_Project_Medical_System.Forms
             // checkbxDoctor
             // 
             this.checkbxDoctor.AutoSize = true;
-            this.checkbxDoctor.Location = new System.Drawing.Point(33, 294);
+            this.checkbxDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkbxDoctor.Location = new System.Drawing.Point(43, 291);
             this.checkbxDoctor.Name = "checkbxDoctor";
-            this.checkbxDoctor.Size = new System.Drawing.Size(75, 21);
+            this.checkbxDoctor.Size = new System.Drawing.Size(72, 21);
             this.checkbxDoctor.TabIndex = 6;
             this.checkbxDoctor.Text = "Doctor?";
             this.checkbxDoctor.UseVisualStyleBackColor = true;
@@ -217,7 +218,7 @@ namespace Computer_Science_Project_Medical_System.Forms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Register_form";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
