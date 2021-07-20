@@ -79,6 +79,12 @@
     <Compile Include="Forms\Patient_form.designer.cs">
       <DependentUpon>Patient_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RegisterPatientDetails_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterPatientDetails_Form.Designer.cs">
+      <DependentUpon>RegisterPatientDetails_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Register_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Patient_form.resx">
       <DependentUpon>Patient_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterPatientDetails_Form.resx">
+      <DependentUpon>RegisterPatientDetails_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register_form.resx">
       <DependentUpon>Register_form.cs</DependentUpon>

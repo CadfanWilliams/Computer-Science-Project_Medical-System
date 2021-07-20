@@ -21,7 +21,6 @@ namespace Computer_Science_Project_Medical_System.Forms
         public string UserType = "Patient";
         //Connection to database
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -32,17 +31,28 @@ namespace Computer_Science_Project_Medical_System.Forms
             }
             else if (txtPassword.Text == txtComPassword.Text)
             {
-                
-                con.Open();
-                string register = "INSERT INTO tbl_users VALUES ('"+ txtUsername.Text +"','" + txtPassword.Text + "','"+ UserType +"')";
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand();
 
-                cmd = new OleDbCommand(register, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    cmd.Connection = con;
+                    cmd.CommandText = "insert into tbl_users ([username], [password], [usertype]) values('" + txtUsername.Text + "','" + txtPassword.Text + "','" + UserType + "')";              
+                    
+                    cmd.ExecuteNonQuery();
+
+                    con.Close();
+
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtComPassword.Text = "";
+
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex);
+                    Application.Exit();
+                }
                 
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtComPassword.Text = "";
 
                 MessageBox.Show("Your Account has been successfully created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
