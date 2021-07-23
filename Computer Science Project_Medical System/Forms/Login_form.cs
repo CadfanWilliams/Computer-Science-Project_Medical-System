@@ -98,8 +98,8 @@ namespace Computer_Science_Project_Medical_System
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
            
-            frmPatient frm = new frmPatient(3);
-            frm.Show();
+            frmPatient frm = new frmPatient(5);
+            frm.ShowDialog();
             this.Hide();
         }
         

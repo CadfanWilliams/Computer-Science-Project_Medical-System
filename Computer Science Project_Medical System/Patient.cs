@@ -50,10 +50,12 @@ namespace Computer_Science_Project_Medical_System
         //Methods
         public void getDetails()
         {
-            con.Open();
             string login = "SELECT * FROM tbl_patients WHERE userid = '" + Userid + "'";
             cmd = new OleDbCommand(login, con);
+
+            con.Open();
             OleDbDataReader dr = cmd.ExecuteReader();
+            
             while (dr.Read())
             {
                 this.Forename = dr.GetString(1);
@@ -63,4 +65,5 @@ namespace Computer_Science_Project_Medical_System
         }
 
     }
+
 }

@@ -27,8 +27,7 @@ namespace Computer_Science_Project_Medical_System
         {
             InitializeComponent();
             Userid = userid;
-            getLoginDetails();
-            setdetails();
+
             
 
         }
@@ -52,6 +51,12 @@ namespace Computer_Science_Project_Medical_System
             Patient loggedin = new Patient(Userid);
             forename = loggedin.Forename;
             surname = loggedin.Surname;
+        }
+
+        private void frmPatient_Load(object sender, EventArgs e)
+        {
+            getLoginDetails();
+            setdetails();
         }
     }
 }

@@ -29,8 +29,8 @@ namespace Computer_Science_Project_Medical_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExitPatient = new System.Windows.Forms.Button();
             this.lblForename = new System.Windows.Forms.Label();
+            this.btnExitPatient = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +44,16 @@ namespace Computer_Science_Project_Medical_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 600);
             this.panel1.TabIndex = 0;
+            // 
+            // lblForename
+            // 
+            this.lblForename.AutoSize = true;
+            this.lblForename.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForename.Location = new System.Drawing.Point(12, 134);
+            this.lblForename.Name = "lblForename";
+            this.lblForename.Size = new System.Drawing.Size(77, 17);
+            this.lblForename.TabIndex = 2;
+            this.lblForename.Text = "Welcome...";
             // 
             // btnExitPatient
             // 
@@ -61,16 +71,6 @@ namespace Computer_Science_Project_Medical_System
             this.btnExitPatient.UseVisualStyleBackColor = false;
             this.btnExitPatient.Click += new System.EventHandler(this.btnExitPatient_Click);
             // 
-            // lblForename
-            // 
-            this.lblForename.AutoSize = true;
-            this.lblForename.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForename.Location = new System.Drawing.Point(12, 134);
-            this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(77, 17);
-            this.lblForename.TabIndex = 2;
-            this.lblForename.Text = "Welcome...";
-            // 
             // frmPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,6 +83,7 @@ namespace Computer_Science_Project_Medical_System
             this.Name = "frmPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmPatient_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

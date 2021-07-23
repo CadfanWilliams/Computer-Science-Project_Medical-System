@@ -35,13 +35,15 @@ namespace Computer_Science_Project_Medical_System.Forms
                 {
                     con.Open();
                     OleDbCommand cmd = new OleDbCommand();
-
                     cmd.Connection = con;
                     cmd.CommandText = "insert into tbl_users ([username], [password], [usertype]) values('" + txtUsername.Text + "','" + txtPassword.Text + "','" + UserType + "')";              
-                    
                     cmd.ExecuteNonQuery();
-
                     con.Close();
+
+                    
+
+                    RegisterPatientDetails_Form EnterDetails = new RegisterPatientDetails_Form(txtUsername.Text);
+                    EnterDetails.Show();
 
                     txtUsername.Text = "";
                     txtPassword.Text = "";
