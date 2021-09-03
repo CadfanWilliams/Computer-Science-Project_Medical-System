@@ -102,7 +102,11 @@ namespace Computer_Science_Project_Medical_System
             frm.ShowDialog();
             this.Hide();
         }
-        
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

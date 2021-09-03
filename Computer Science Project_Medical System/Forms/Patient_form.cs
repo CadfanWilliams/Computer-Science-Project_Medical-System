@@ -18,11 +18,20 @@ namespace Computer_Science_Project_Medical_System
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
         //fields
+        public int patientid;
         public string forename;
         public string surname;
+        public string gender;
+        public string dob;
+        public string email;
+        public string phonenumber;
+        public string addressline1;
+        public string addressline2;
+        public string addressline3;
+        public string postcode;
         public int Userid;
         //methods
- 
+
         public frmPatient(int userid)
         {
             InitializeComponent();
@@ -44,13 +53,37 @@ namespace Computer_Science_Project_Medical_System
         {
 
             lblForename.Text = "Welcome " + forename + " " + surname;
+            patientid1.Text = patientid.ToString();
+            label12.Text = forename;
+            label13.Text = surname;
+            label14.Text = gender;
+            label15.Text = dob;
+            label16.Text = email;
+            label17.Text = phonenumber;
+            label18.Text = addressline1;
+            label19.Text = addressline2;
+            label20.Text = addressline3;
+            label21.Text = postcode;
+
+
         }
         public void getLoginDetails()
         {
 
             Patient loggedin = new Patient(Userid);
-            forename = loggedin.Forename;
-            surname = loggedin.Surname;
+            forename = loggedin.forename;
+            surname = loggedin.surname;
+            gender = loggedin.gender;
+            dob = loggedin.dob;
+            email = loggedin.email;
+            phonenumber = loggedin.phonenumber;
+            addressline1 = loggedin.addressline1;
+            addressline2 = loggedin.addressline2;
+            addressline3 = loggedin.addressline3;
+            postcode = loggedin.postcode;
+
+
+
         }
 
         private void frmPatient_Load(object sender, EventArgs e)

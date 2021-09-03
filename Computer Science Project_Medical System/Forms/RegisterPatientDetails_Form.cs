@@ -52,7 +52,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
                     OleDbCommand cmd = new OleDbCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.ToString() + "','" + dtpDob.Value + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
+                    cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
                     cmd.ExecuteNonQuery();
 
                     con.Close();

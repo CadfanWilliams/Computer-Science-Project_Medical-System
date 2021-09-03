@@ -17,8 +17,19 @@ namespace Computer_Science_Project_Medical_System
 
 
         // Fields
-
-
+        public int patientid;
+        public string forename;
+        public string surname;
+        public string gender;
+        public string dob;
+        public string email;
+        public string phonenumber;
+        public string addressline1;
+        public string addressline2;
+        public string addressline3;
+        public string postcode;
+        public int userid;
+        
 
         //Constructors
 
@@ -58,8 +69,18 @@ namespace Computer_Science_Project_Medical_System
             
             while (dr.Read())
             {
-                this.Forename = dr.GetString(1);
-                this.Surname = dr.GetString(2);
+                this.patientid = dr.GetInt32(0);
+                this.forename = dr.GetString(1);
+                this.surname = dr.GetString(2);
+                this.gender = dr.GetString(3);
+                this.dob = dr.GetDateTime(4).ToShortDateString();
+                this.email = dr.GetString(5);
+                this.phonenumber = dr.GetString(6);
+                this.addressline1 = dr.GetString(7);
+                this.addressline2 = dr.GetString(8);
+                this.addressline3 = dr.GetString(9);
+                this.postcode = dr.GetString(10);
+
             }
             dr.Close();
         }
