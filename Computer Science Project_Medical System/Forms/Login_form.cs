@@ -41,8 +41,8 @@ namespace Computer_Science_Project_Medical_System
             con.Open();
             string login = "SELECT * FROM tbl_users WHERE username = '" + txtUsername.Text + "' and password= '" + txtPassword.Text + "'";
             cmd = new OleDbCommand(login, con);
-            OleDbDataReader dr = cmd.ExecuteReader();
-            string usertype;
+            OleDbDataReader dr = cmd.ExecuteReader(); //SELF DOCUMENTING, NOT SHORT HAND, DINGUS!
+            string usertype; //unless its physically impossible, declare all variables at the start of the method
             while (dr.Read())
             {
                 usertype = dr.GetString(3);
