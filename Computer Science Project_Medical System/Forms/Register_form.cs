@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace Computer_Science_Project_Medical_System.Forms
 {
@@ -17,11 +17,12 @@ namespace Computer_Science_Project_Medical_System.Forms
         {
             InitializeComponent();
         }
-        //string for doctor
+        //default usertype is patient as neither doctor or patient would be set if checkbox not selected
         public string UserType = "Patient";
+        //
         //Connection to database
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbDataAdapter da = new OleDbDataAdapter();
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
+        SqlDataAdapter da = new SqlDataAdapter();
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -34,7 +35,7 @@ namespace Computer_Science_Project_Medical_System.Forms
                 try
                 {
                     con.Open();
-                    OleDbCommand cmd = new OleDbCommand();
+                    SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
                     cmd.CommandText = "insert into tbl_users ([username], [password], [usertype]) values('" + txtUsername.Text + "','" + txtPassword.Text + "','" + UserType + "')";              
                     cmd.ExecuteNonQuery();

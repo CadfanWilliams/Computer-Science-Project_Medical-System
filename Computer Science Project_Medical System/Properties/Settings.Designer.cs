@@ -33,5 +33,16 @@ namespace Computer_Science_Project_Medical_System.Properties {
                 return ((string)(this["cn"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-2BA89GI\\SQLEXPRESS01;Initial Catalog=\"Medical System\";Integra" +
+            "ted Security=True")]
+        public string Medical_SystemConnectionString {
+            get {
+                return ((string)(this["Medical_SystemConnectionString"]));
+            }
+        }
     }
 }

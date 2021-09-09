@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace Computer_Science_Project_Medical_System.Forms
 {
     public partial class RegisterPatientDetails_Form : Form
     {
         //Connection to database
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
+        SqlDataAdapter da = new SqlDataAdapter();
         //
         //Constructors
         public RegisterPatientDetails_Form()
@@ -50,9 +49,9 @@ namespace Computer_Science_Project_Medical_System.Forms
                 {
                     con.Open();
 
-                    OleDbCommand cmd = new OleDbCommand();
+                    SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
+                    cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
                     cmd.ExecuteNonQuery();
 
                     con.Close();
@@ -84,18 +83,18 @@ namespace Computer_Science_Project_Medical_System.Forms
         {
             con.Open();
 
-            OleDbCommand cmd = new OleDbCommand();
+            SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = "SELECT * FROM tbl_users WHERE username = '" + username1 + "'";
             cmd.ExecuteNonQuery();
-            OleDbDataReader dr = cmd.ExecuteReader();
+            SqlDataReader DataReader = cmd.ExecuteReader();
             
-            while (dr.Read())
+            while (DataReader.Read())
             {
-                Userid = dr.GetInt32(0);
+                Userid = DataReader.GetInt32(0);
             }
             
-            dr.Close();
+            DataReader.Close();
             con.Close();
         }
         

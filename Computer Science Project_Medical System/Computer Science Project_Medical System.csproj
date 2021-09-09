@@ -91,6 +91,11 @@
     <Compile Include="Forms\Register_form.Designer.cs">
       <DependentUpon>Register_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medical_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Medical_SystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +124,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Medical_SystemDataSet.xsc">
+      <DependentUpon>Medical_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Medical_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Medical_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Medical_SystemDataSet.xss">
+      <DependentUpon>Medical_SystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

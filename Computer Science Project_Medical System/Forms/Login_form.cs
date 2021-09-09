@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
 using Computer_Science_Project_Medical_System.Forms;
+
 
 
 namespace Computer_Science_Project_Medical_System
@@ -25,40 +25,50 @@ namespace Computer_Science_Project_Medical_System
         }
 
         //Connection to database
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
-
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
+        //
+        //
+        //Opens register form
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
             frmRegister frmRegister = new frmRegister();
             frmRegister.Show();
             this.Hide();
         }
-
+        // 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //Variables for method
+            string usertype;
+            string sqlquery1; //gets record from database matching user entry
+            //Sql Commands
+            sqlquery1 = "SELECT * FROM tbl_users WHERE username = '" + txtUsername.Text + "' and password= '" + txtPassword.Text + "'";
+            SqlCommand cmd = new SqlCommand(sqlquery1, con);
+            //Opens the connection / connects to database
             con.Open();
-            string login = "SELECT * FROM tbl_users WHERE username = '" + txtUsername.Text + "' and password= '" + txtPassword.Text + "'";
-            cmd = new OleDbCommand(login, con);
-            OleDbDataReader dr = cmd.ExecuteReader(); //SELF DOCUMENTING, NOT SHORT HAND, DINGUS!
-            string usertype; //unless its physically impossible, declare all variables at the start of the method
-            while (dr.Read())
+            //
+            SqlDataReader DataReader = cmd.ExecuteReader();
+            //
+            while (DataReader.Read())
             {
-                usertype = dr.GetString(3);
-                int userid2 = dr.GetInt32(0);
-                if (usertype == "Patient")
+                //DataReader must have > 1 rows to continue
+                if (DataReader.HasRows)
                 {
-                    new frmPatient(userid2).Show();
-                    this.Hide();
-                  
-                }
-                else if (usertype == "Doctor")
-                {
-                    frmDoctor doc = new frmDoctor();
-                    doc.Show();
-                    this.Hide();
-                   
+                    usertype = DataReader.GetString(3);
+                    int userid = DataReader.GetInt32(0);
+                    if (usertype == "Patient")
+                    {
+                        new frmPatient(userid).Show();
+                        this.Hide();
+
+                    }
+                    else if (usertype == "Doctor")
+                    {
+                        frmDoctor doc = new frmDoctor();
+                        doc.Show();
+                        this.Hide();
+
+                    }
                 }
                 else
                 {
@@ -66,14 +76,22 @@ namespace Computer_Science_Project_Medical_System
                     txtUsername.Text = "";
                     txtPassword.Text = "";
                     txtUsername.Focus();
-                    
+
+                    //closes reader if no login is returned
+                    DataReader.Close();
+                    con.Close();
                 }
+
                 
             }
-            dr.Close();
+            DataReader.Close();
+            con.Close();
 
-            
+
         }
+
+
+        //Clears all textboxes
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtUsername.Text = "";
@@ -81,6 +99,7 @@ namespace Computer_Science_Project_Medical_System
             txtUsername.Focus();
         }
 
+        //Changes the visibility of the password textfields
         private void CheckbxShowPas_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckbxShowPas.Checked)
@@ -95,14 +114,16 @@ namespace Computer_Science_Project_Medical_System
             }
         }
 
+
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
            
-            frmPatient frm = new frmPatient(5);
+            frmPatient frm = new frmPatient(1);
             frm.ShowDialog();
             this.Hide();
         }
 
+        //Button To exit the form, closes whole application
         private void lblExit_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -7,16 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+
 
 namespace Computer_Science_Project_Medical_System
 {
     public partial class frmPatient : Form
     {
-        //Connection to database
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
         //fields
         public int patientid;
         public string forename;
@@ -36,19 +32,15 @@ namespace Computer_Science_Project_Medical_System
         {
             InitializeComponent();
             Userid = userid;
-
-            
-
         }
 
-
-
-
+        //Closes the application
         private void btnExitPatient_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
         }
+        //Sets the details of the patient to the labels on the form
         public void setdetails()
         {
 
@@ -65,8 +57,8 @@ namespace Computer_Science_Project_Medical_System
             label20.Text = addressline3;
             label21.Text = postcode;
 
-
         }
+        //gets the details of the patient logging in from tbl_patients
         public void getLoginDetails()
         {
 
@@ -86,8 +78,10 @@ namespace Computer_Science_Project_Medical_System
 
         }
 
+        //method ran when form is loaded
         private void frmPatient_Load(object sender, EventArgs e)
         {
+            //gets login details of patient then sets them
             getLoginDetails();
             setdetails();
         }
