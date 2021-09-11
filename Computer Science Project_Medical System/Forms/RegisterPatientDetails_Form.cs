@@ -31,6 +31,7 @@ namespace Computer_Science_Project_Medical_System.Forms
         //Fields
         public int Userid;
         public string Username;
+        public string usertype;
 
         //Methods
 
@@ -45,13 +46,23 @@ namespace Computer_Science_Project_Medical_System.Forms
 
             if(checkpresence() == false)
             {
+
                 try
                 {
                     con.Open();
 
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
+                    if(usertype == "Patient")
+                    {
+                        cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
+
+                    }
+                    else if(usertype == "Doctor")
+                    {
+                        cmd.CommandText = "insert into tbl_doctors ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid],[specialty]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "','" + "test" +"')";
+
+                    }
                     cmd.ExecuteNonQuery();
 
                     con.Close();
@@ -92,6 +103,7 @@ namespace Computer_Science_Project_Medical_System.Forms
             while (DataReader.Read())
             {
                 Userid = DataReader.GetInt32(0);
+                usertype = DataReader.GetString(3);
             }
             
             DataReader.Close();

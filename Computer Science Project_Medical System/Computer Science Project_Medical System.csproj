@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Doctor.cs" />
     <Compile Include="Forms\Doctor_form.cs">
       <SubType>Form</SubType>
     </Compile>

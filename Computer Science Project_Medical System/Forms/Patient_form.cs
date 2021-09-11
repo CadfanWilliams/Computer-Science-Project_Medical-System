@@ -85,5 +85,10 @@ namespace Computer_Science_Project_Medical_System
             getLoginDetails();
             setdetails();
         }
+
+        private void lblEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
