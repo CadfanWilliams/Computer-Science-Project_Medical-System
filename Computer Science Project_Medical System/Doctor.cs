@@ -38,7 +38,11 @@ namespace Computer_Science_Project_Medical_System
         //properties
         //
         //methods
-
+        public void getAppointmentDetails()
+        {
+            //gets all the appointments for the doctor
+            //get appointments where doctor id is == to the doctor logged in
+        }
         
         public void getDoctorDetails()
         {
