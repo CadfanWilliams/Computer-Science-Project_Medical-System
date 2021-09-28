@@ -32,7 +32,7 @@ namespace Computer_Science_Project_Medical_System
         public Doctor(int userid)
         {
             this.Userid = userid;
-            
+            getDoctorDetails();
         }
         //
         //properties
@@ -43,6 +43,29 @@ namespace Computer_Science_Project_Medical_System
         public void getDoctorDetails()
         {
             //Get details of the doctor
+            //Sql Commands
+            string query = "Select * From tbl_doctors WHERE doctorid = '" + Userid + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            con.Open();
+            SqlDataReader DataReader = cmd.ExecuteReader();
+
+            while (DataReader.Read())
+            {
+                this.doctorid = DataReader.GetInt32(0);
+                this.forename = DataReader.GetString(1);
+                this.surname = DataReader.GetString(2);
+                this.gender = DataReader.GetString(3);
+                this.dob = DataReader.GetDateTime(4).ToShortDateString();
+                this.email = DataReader.GetString(5);
+                this.phonenumber = DataReader.GetString(6);
+                this.addressline1 = DataReader.GetString(7);
+                this.addressline2 = DataReader.GetString(8);
+                this.addressline3 = DataReader.GetString(9);
+                this.postcode = DataReader.GetString(10);
+                this.specialty = DataReader.GetString(11);
+            }
+            DataReader.Close();
         }
     }
 }

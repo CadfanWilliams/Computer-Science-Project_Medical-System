@@ -12,7 +12,7 @@ namespace Computer_Science_Project_Medical_System
     {
         //Connection to database
         SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
-
+        
         // Fields
         public int patientid;
         public string forename;
@@ -48,6 +48,7 @@ namespace Computer_Science_Project_Medical_System
         //Methods
         public void getDetails()
         {
+            //Gets the details of the patient
             //SQL Commands
             string Query = "SELECT * FROM tbl_patients WHERE userid = '" + Userid + "'";
             SqlCommand cmd = new SqlCommand(Query, con);
