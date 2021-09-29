@@ -27,6 +27,7 @@ namespace Computer_Science_Project_Medical_System
         public string postcode;
         public string specialty;
         public int Userid;
+
         //
         //Constructors
         public Doctor(int userid)
@@ -35,15 +36,8 @@ namespace Computer_Science_Project_Medical_System
             getDoctorDetails();
         }
         //
-        //properties
-        //
         //methods
-        public void getAppointmentDetails()
-        {
-            //gets all the appointments for the doctor
-            //get appointments where doctor id is == to the doctor logged in
-        }
-        
+        //
         public void getDoctorDetails()
         {
             //Get details of the doctor
@@ -56,7 +50,7 @@ namespace Computer_Science_Project_Medical_System
 
             while (DataReader.Read())
             {
-                this.doctorid = DataReader.GetInt32(0);
+                doctorid = DataReader.GetInt32(0);
                 this.forename = DataReader.GetString(1);
                 this.surname = DataReader.GetString(2);
                 this.gender = DataReader.GetString(3);
@@ -71,5 +65,6 @@ namespace Computer_Science_Project_Medical_System
             }
             DataReader.Close();
         }
+
     }
 }

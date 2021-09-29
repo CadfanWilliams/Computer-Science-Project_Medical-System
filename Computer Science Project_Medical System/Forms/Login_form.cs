@@ -64,8 +64,7 @@ namespace Computer_Science_Project_Medical_System
                     }
                     else if (usertype == "Doctor")
                     {
-                        frmDoctor doc = new frmDoctor();
-                        doc.Show();
+                        new frmDoctor(userid).Show();
                         this.Hide();
 
                     }

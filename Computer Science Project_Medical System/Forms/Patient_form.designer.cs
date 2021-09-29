@@ -29,6 +29,8 @@ namespace Computer_Science_Project_Medical_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblEdit = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@ namespace Computer_Science_Project_Medical_System
             this.lblYourDetails = new System.Windows.Forms.Label();
             this.lblForename = new System.Windows.Forms.Label();
             this.btnExitPatient = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lblEdit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,26 @@ namespace Computer_Science_Project_Medical_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(191, 600);
             this.panel1.TabIndex = 0;
+            // 
+            // lblEdit
+            // 
+            this.lblEdit.AutoSize = true;
+            this.lblEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdit.Location = new System.Drawing.Point(77, 460);
+            this.lblEdit.Name = "lblEdit";
+            this.lblEdit.Size = new System.Drawing.Size(31, 16);
+            this.lblEdit.TabIndex = 8;
+            this.lblEdit.Text = "Edit";
+            this.lblEdit.Click += new System.EventHandler(this.lblEdit_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(37, 447);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 13);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Incorrect? ";
             // 
             // label21
             // 
@@ -341,26 +361,6 @@ namespace Computer_Science_Project_Medical_System
             this.btnExitPatient.UseVisualStyleBackColor = false;
             this.btnExitPatient.Click += new System.EventHandler(this.btnExitPatient_Click);
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(37, 447);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 13);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "Incorrect? ";
-            // 
-            // lblEdit
-            // 
-            this.lblEdit.AutoSize = true;
-            this.lblEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdit.Location = new System.Drawing.Point(77, 460);
-            this.lblEdit.Name = "lblEdit";
-            this.lblEdit.Size = new System.Drawing.Size(31, 16);
-            this.lblEdit.TabIndex = 8;
-            this.lblEdit.Text = "Edit";
-            this.lblEdit.Click += new System.EventHandler(this.lblEdit_Click);
-            // 
             // frmPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,7 +373,6 @@ namespace Computer_Science_Project_Medical_System
             this.Name = "frmPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmPatient_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

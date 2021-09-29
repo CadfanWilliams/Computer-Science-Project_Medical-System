@@ -12,7 +12,7 @@ namespace Computer_Science_Project_Medical_System
     {
         //Connection to database
         SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
-        
+        //
         // Fields
         public int patientid;
         public string forename;
@@ -25,28 +25,19 @@ namespace Computer_Science_Project_Medical_System
         public string addressline2;
         public string addressline3;
         public string postcode;
- 
-        //Constructors
+        public int Userid;
 
+        //
+        //Constructors
         public Patient(int userid)
         {
             this.Userid = userid;
-
-            getDetails();
-
-            
+            getPatientDetails();
         }
-        //Properties
-
-        public string Forename
-        { get; set; }
-        public string Surname
-        { get; set; }
-        public int Userid
-        { get; set; }
-
+        //
         //Methods
-        public void getDetails()
+        //
+        public void getPatientDetails()
         {
             //Gets the details of the patient
             //SQL Commands

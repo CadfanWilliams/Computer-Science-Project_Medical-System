@@ -13,6 +13,8 @@ namespace Computer_Science_Project_Medical_System
 {
     public partial class frmPatient : Form
     {
+        
+
         //fields
         public int patientid;
         public string forename;
@@ -32,6 +34,9 @@ namespace Computer_Science_Project_Medical_System
         {
             InitializeComponent();
             Userid = userid;
+            getPatientDetails();
+            setPatientDetails();
+
         }
 
         //Closes the application
@@ -39,9 +44,10 @@ namespace Computer_Science_Project_Medical_System
         {
             this.Close();
             Application.Exit();
+            getPatientDetails();
         }
         //Sets the details of the patient to the labels on the form
-        public void setdetails()
+        public void setPatientDetails()
         {
 
             lblForename.Text = "Welcome " + forename + " " + surname;
@@ -59,9 +65,8 @@ namespace Computer_Science_Project_Medical_System
 
         }
         //gets the details of the patient logging in from tbl_patients
-        public void getLoginDetails()
-        {
-
+        public void getPatientDetails()
+        { 
             Patient loggedin = new Patient(Userid);
             forename = loggedin.forename;
             surname = loggedin.surname;
@@ -76,14 +81,6 @@ namespace Computer_Science_Project_Medical_System
 
 
 
-        }
-
-        //method ran when form is loaded
-        private void frmPatient_Load(object sender, EventArgs e)
-        {
-            //gets login details of patient then sets them
-            getLoginDetails();
-            setdetails();
         }
 
         private void lblEdit_Click(object sender, EventArgs e)
