@@ -32,6 +32,7 @@ namespace Computer_Science_Project_Medical_System
         {
             InitializeComponent();
             this.Userid = userid;
+            setDetails();
         }
         
         private void btnExitDoctor_Click(object sender, EventArgs e)
@@ -45,10 +46,21 @@ namespace Computer_Science_Project_Medical_System
 
         }
 
-        public void getAppointments()
+        public void setDetails()
         {
+            //Initiate Doctor class instance
             Doctor loggedin = new Doctor(Userid);
 
+            txtForename.Text = loggedin.forename;
+            txtSurname.Text = loggedin.surname;
+            txtGender.Text = loggedin.gender;
+            txtDob.Text = loggedin.dob;
+            txtEmail.Text = loggedin.email;
+            txtPhonenumber.Text = loggedin.phonenumber;
+            txtAdd1.Text = loggedin.addressline1;
+            txtAdd2.Text = loggedin.addressline2;
+            txtAdd3.Text = loggedin.addressline3;
+            txtPostcode.Text = loggedin.postcode;
         }
     }
 }

@@ -42,7 +42,7 @@ namespace Computer_Science_Project_Medical_System
         {
             //Get details of the doctor
             //Sql Commands
-            string query = "Select * From tbl_doctors WHERE doctorid = '" + Userid + "'";
+            string query = "SELECT * FROM tbl_doctors WHERE userid = '" + Userid + "'";
             SqlCommand cmd = new SqlCommand(query, con);
 
             con.Open();
@@ -50,7 +50,7 @@ namespace Computer_Science_Project_Medical_System
 
             while (DataReader.Read())
             {
-                doctorid = DataReader.GetInt32(0);
+                this.doctorid = DataReader.GetInt32(0);
                 this.forename = DataReader.GetString(1);
                 this.surname = DataReader.GetString(2);
                 this.gender = DataReader.GetString(3);
@@ -61,7 +61,7 @@ namespace Computer_Science_Project_Medical_System
                 this.addressline2 = DataReader.GetString(8);
                 this.addressline3 = DataReader.GetString(9);
                 this.postcode = DataReader.GetString(10);
-                this.specialty = DataReader.GetString(11);
+                //3this.specialty = DataReader.GetString(11);
             }
             DataReader.Close();
         }

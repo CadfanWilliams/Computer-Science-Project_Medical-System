@@ -190,7 +190,7 @@ namespace Computer_Science_Project_Medical_System
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(66, 260);
+            this.label13.Location = new System.Drawing.Point(58, 267);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 6;
