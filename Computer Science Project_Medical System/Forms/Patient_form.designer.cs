@@ -29,6 +29,8 @@ namespace Computer_Science_Project_Medical_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblEdit = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -54,8 +56,7 @@ namespace Computer_Science_Project_Medical_System
             this.lblYourDetails = new System.Windows.Forms.Label();
             this.lblForename = new System.Windows.Forms.Label();
             this.btnExitPatient = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lblEdit = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +95,26 @@ namespace Computer_Science_Project_Medical_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(191, 600);
             this.panel1.TabIndex = 0;
+            // 
+            // lblEdit
+            // 
+            this.lblEdit.AutoSize = true;
+            this.lblEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdit.Location = new System.Drawing.Point(77, 460);
+            this.lblEdit.Name = "lblEdit";
+            this.lblEdit.Size = new System.Drawing.Size(31, 16);
+            this.lblEdit.TabIndex = 8;
+            this.lblEdit.Text = "Edit";
+            this.lblEdit.Click += new System.EventHandler(this.lblEdit_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(37, 447);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 13);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Incorrect? ";
             // 
             // label21
             // 
@@ -341,25 +362,13 @@ namespace Computer_Science_Project_Medical_System
             this.btnExitPatient.UseVisualStyleBackColor = false;
             this.btnExitPatient.Click += new System.EventHandler(this.btnExitPatient_Click);
             // 
-            // label22
+            // textBox1
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(37, 447);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 13);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "Incorrect? ";
-            // 
-            // lblEdit
-            // 
-            this.lblEdit.AutoSize = true;
-            this.lblEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdit.Location = new System.Drawing.Point(77, 460);
-            this.lblEdit.Name = "lblEdit";
-            this.lblEdit.Size = new System.Drawing.Size(31, 16);
-            this.lblEdit.TabIndex = 8;
-            this.lblEdit.Text = "Edit";
-            this.lblEdit.Click += new System.EventHandler(this.lblEdit_Click);
+            this.textBox1.Location = new System.Drawing.Point(309, 93);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(581, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "DELETE LEFT SIDE AND ADD PANELS, BUTTONS ON LEFT SIDE";
             // 
             // frmPatient
             // 
@@ -367,6 +376,7 @@ namespace Computer_Science_Project_Medical_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExitPatient);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -377,6 +387,7 @@ namespace Computer_Science_Project_Medical_System
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -410,5 +421,6 @@ namespace Computer_Science_Project_Medical_System
         private System.Windows.Forms.Label patientid1;
         private System.Windows.Forms.Label lblEdit;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
