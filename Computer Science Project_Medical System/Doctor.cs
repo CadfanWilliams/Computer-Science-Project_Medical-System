@@ -61,7 +61,7 @@ namespace Computer_Science_Project_Medical_System
                 this.addressline2 = DataReader.GetString(8);
                 this.addressline3 = DataReader.GetString(9);
                 this.postcode = DataReader.GetString(10);
-                //3this.specialty = DataReader.GetString(11);
+                this.specialty = DataReader.GetString(12);
             }
             DataReader.Close();
         }

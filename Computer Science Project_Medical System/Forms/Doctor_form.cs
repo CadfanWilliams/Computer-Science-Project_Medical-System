@@ -50,7 +50,7 @@ namespace Computer_Science_Project_Medical_System
         {
             //Initiate Doctor class instance
             Doctor loggedin = new Doctor(Userid);
-
+            welcomeLbl.Text = "Welcome " + loggedin.forename;
             txtForename.Text = loggedin.forename;
             txtSurname.Text = loggedin.surname;
             txtGender.Text = loggedin.gender;
@@ -61,6 +61,8 @@ namespace Computer_Science_Project_Medical_System
             txtAdd2.Text = loggedin.addressline2;
             txtAdd3.Text = loggedin.addressline3;
             txtPostcode.Text = loggedin.postcode;
+            txtSpecialty.Text = loggedin.specialty;
+            txtDocid.Text = loggedin.Userid.ToString();
         }
     }
 }
