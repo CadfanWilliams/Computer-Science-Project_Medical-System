@@ -1,11 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -13,7 +6,7 @@ namespace Computer_Science_Project_Medical_System
 {
     public partial class frmPatient : Form
     {
-        
+
 
         //fields
         public int patientid;
@@ -66,7 +59,7 @@ namespace Computer_Science_Project_Medical_System
         }
         //gets the details of the patient logging in from tbl_patients
         public void getPatientDetails()
-        { 
+        {
             Patient loggedin = new Patient(Userid);
             forename = loggedin.forename;
             surname = loggedin.surname;

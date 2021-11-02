@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 
 namespace Computer_Science_Project_Medical_System
@@ -46,7 +41,7 @@ namespace Computer_Science_Project_Medical_System
 
             con.Open();
             SqlDataReader DataReader = cmd.ExecuteReader();
-            
+
             while (DataReader.Read())
             {
                 this.patientid = DataReader.GetInt32(0);

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Computer_Science_Project_Medical_System.Forms
 {
@@ -40,11 +33,11 @@ namespace Computer_Science_Project_Medical_System.Forms
             getuserid(Username);
         }
 
-       
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
 
-            if(checkpresence() == false)
+            if (checkpresence() == false)
             {
 
                 try
@@ -53,20 +46,20 @@ namespace Computer_Science_Project_Medical_System.Forms
 
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
-                    if(usertype == "Patient")
+                    if (usertype == "Patient")
                     {
                         cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
 
                     }
-                    else if(usertype == "Doctor")
+                    else if (usertype == "Doctor")
                     {
-                        cmd.CommandText = "insert into tbl_doctors ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid],[specialty]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "','" + "test" +"')";
+                        cmd.CommandText = "insert into tbl_doctors ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid],[specialty]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "','" + "test" + "')";
 
                     }
                     cmd.ExecuteNonQuery();
 
                     con.Close();
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -99,20 +92,20 @@ namespace Computer_Science_Project_Medical_System.Forms
             cmd.CommandText = "SELECT * FROM tbl_users WHERE username = '" + username1 + "'";
             cmd.ExecuteNonQuery();
             SqlDataReader DataReader = cmd.ExecuteReader();
-            
+
             while (DataReader.Read())
             {
                 Userid = DataReader.GetInt32(0);
                 usertype = DataReader.GetString(3);
             }
-            
+
             DataReader.Close();
             con.Close();
         }
-        
 
-                    
-        
-       
+
+
+
+
     }
 }

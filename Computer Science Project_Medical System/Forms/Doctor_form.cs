@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Computer_Science_Project_Medical_System
@@ -34,7 +27,7 @@ namespace Computer_Science_Project_Medical_System
             this.Userid = userid;
             setDetails();
         }
-        
+
         private void btnExitDoctor_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -63,6 +56,42 @@ namespace Computer_Science_Project_Medical_System
             txtPostcode.Text = loggedin.postcode;
             txtSpecialty.Text = loggedin.specialty;
             txtDocid.Text = loggedin.Userid.ToString();
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            //close all panels and open Details Panel
+            pnlDetails.Show();
+
+        }
+
+        private void frmDoctor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            //allows user to edit txt boxes except for Docid
+            txtForename.ReadOnly = false;
+            txtSurname.ReadOnly = false;
+            txtGender.ReadOnly = false;
+            txtDob.ReadOnly = false;
+            txtEmail.ReadOnly = false;
+            txtPhonenumber.ReadOnly = false;
+            txtAdd1.ReadOnly = false;
+            txtAdd2.ReadOnly = false;
+            txtAdd3.ReadOnly = false;
+            txtPostcode.ReadOnly = false;
+            txtSpecialty.ReadOnly = false;
+            //allows users to save the details
+            btn_save.Enabled = true;
+
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            btn_save.Enabled = false;
         }
     }
 }

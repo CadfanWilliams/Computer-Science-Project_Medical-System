@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 
 namespace Computer_Science_Project_Medical_System
@@ -64,6 +59,12 @@ namespace Computer_Science_Project_Medical_System
                 this.specialty = DataReader.GetString(12);
             }
             DataReader.Close();
+        }
+
+        public void saveDetails()
+        {
+            //Saves the doctors details/ Appends the details
+            //string query = "UPDATE Doctor(Forename, Surname, Gender, DOB, Email, Phonenumber, Addressline1, Addressline2, Addressline3, Postcode, Specialty) VALUES () WHERE Docid ='" + doctorid + "'";
         }
 
     }

@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Computer_Science_Project_Medical_System.Forms;
+using System;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Computer_Science_Project_Medical_System.Forms;
 
 
 
 namespace Computer_Science_Project_Medical_System
 {
-    
+
     public partial class frmLogin : Form
     {
         public frmLogin()
         {
             InitializeComponent();
 
-            
+
         }
 
         //Connection to database
@@ -81,7 +74,7 @@ namespace Computer_Science_Project_Medical_System
                     con.Close();
                 }
 
-                
+
             }
             DataReader.Close();
             con.Close();
@@ -104,19 +97,19 @@ namespace Computer_Science_Project_Medical_System
             if (CheckbxShowPas.Checked)
             {
                 txtPassword.PasswordChar = '\0';
-                
+
             }
             else
             {
                 txtPassword.PasswordChar = '•';
-                
+
             }
         }
 
 
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
-           
+
             frmPatient frm = new frmPatient(1);
             frm.ShowDialog();
             this.Hide();
@@ -133,7 +126,7 @@ namespace Computer_Science_Project_Medical_System
             this.Hide();
             frmDoctor frmDoctor = new frmDoctor(5);
             frmDoctor.Show();
-            
+
         }
     }
 }

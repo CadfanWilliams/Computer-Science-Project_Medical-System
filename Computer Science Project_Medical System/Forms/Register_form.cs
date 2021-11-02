@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Computer_Science_Project_Medical_System.Forms
 {
@@ -26,7 +19,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "" || txtPassword.Text == "" || txtComPassword.Text == "")
+            if (txtUsername.Text == "" || txtPassword.Text == "" || txtComPassword.Text == "")
             {
                 MessageBox.Show("None of the fields should be left empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -37,11 +30,11 @@ namespace Computer_Science_Project_Medical_System.Forms
                     con.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tbl_users ([username], [password], [usertype]) values('" + txtUsername.Text + "','" + txtPassword.Text + "','" + UserType + "')";              
+                    cmd.CommandText = "insert into tbl_users ([username], [password], [usertype]) values('" + txtUsername.Text + "','" + txtPassword.Text + "','" + UserType + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    
+
 
                     RegisterPatientDetails_Form EnterDetails = new RegisterPatientDetails_Form(txtUsername.Text);
                     EnterDetails.Show();
@@ -50,18 +43,19 @@ namespace Computer_Science_Project_Medical_System.Forms
                     txtPassword.Text = "";
                     txtComPassword.Text = "";
 
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
                     Application.Exit();
                 }
-                
+
 
                 MessageBox.Show("Your Account has been successfully created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Passwords Do Not Match, Please Re-Enter passwords","Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                MessageBox.Show("Passwords Do Not Match, Please Re-Enter passwords", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.Text = "";
                 txtComPassword.Text = "";
                 txtPassword.Focus();
@@ -98,7 +92,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
         private void checkbxDoctor_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkbxDoctor.Checked == true)
+            if (checkbxDoctor.Checked == true)
             {
                 UserType = "Doctor";
             }

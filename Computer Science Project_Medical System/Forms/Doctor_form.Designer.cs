@@ -58,6 +58,9 @@
             this.lblGender = new System.Windows.Forms.Label();
             this.txtForename = new System.Windows.Forms.TextBox();
             this.lblForename = new System.Windows.Forms.Label();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btnAppointments = new System.Windows.Forms.Button();
             this.pnlDoctor1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.pnlDetails.SuspendLayout();
@@ -66,6 +69,7 @@
             // pnlDoctor1
             // 
             this.pnlDoctor1.BackColor = System.Drawing.Color.DimGray;
+            this.pnlDoctor1.Controls.Add(this.btnAppointments);
             this.pnlDoctor1.Controls.Add(this.btnDetails);
             this.pnlDoctor1.Controls.Add(this.welcomeLbl);
             this.pnlDoctor1.Controls.Add(this.userPicture);
@@ -83,10 +87,11 @@
             this.btnDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetails.Location = new System.Drawing.Point(0, 172);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(180, 52);
+            this.btnDetails.Size = new System.Drawing.Size(180, 60);
             this.btnDetails.TabIndex = 2;
             this.btnDetails.Text = "Details";
             this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // welcomeLbl
             // 
@@ -126,6 +131,8 @@
             // 
             // pnlDetails
             // 
+            this.pnlDetails.Controls.Add(this.btn_save);
+            this.pnlDetails.Controls.Add(this.btn_edit);
             this.pnlDetails.Controls.Add(this.txtDocid);
             this.pnlDetails.Controls.Add(this.lblDocid);
             this.pnlDetails.Controls.Add(this.txtPostcode);
@@ -163,6 +170,7 @@
             this.txtDocid.Location = new System.Drawing.Point(284, 296);
             this.txtDocid.Multiline = true;
             this.txtDocid.Name = "txtDocid";
+            this.txtDocid.ReadOnly = true;
             this.txtDocid.Size = new System.Drawing.Size(216, 28);
             this.txtDocid.TabIndex = 38;
             // 
@@ -203,6 +211,7 @@
             this.txtAdd2.Location = new System.Drawing.Point(284, 196);
             this.txtAdd2.Multiline = true;
             this.txtAdd2.Name = "txtAdd2";
+            this.txtAdd2.ReadOnly = true;
             this.txtAdd2.Size = new System.Drawing.Size(216, 28);
             this.txtAdd2.TabIndex = 34;
             // 
@@ -223,6 +232,7 @@
             this.txtPhonenumber.Location = new System.Drawing.Point(284, 146);
             this.txtPhonenumber.Multiline = true;
             this.txtPhonenumber.Name = "txtPhonenumber";
+            this.txtPhonenumber.ReadOnly = true;
             this.txtPhonenumber.Size = new System.Drawing.Size(216, 28);
             this.txtPhonenumber.TabIndex = 32;
             // 
@@ -243,6 +253,7 @@
             this.txtDob.Location = new System.Drawing.Point(284, 96);
             this.txtDob.Multiline = true;
             this.txtDob.Name = "txtDob";
+            this.txtDob.ReadOnly = true;
             this.txtDob.Size = new System.Drawing.Size(216, 28);
             this.txtDob.TabIndex = 30;
             // 
@@ -263,6 +274,7 @@
             this.txtSurname.Location = new System.Drawing.Point(284, 46);
             this.txtSurname.Multiline = true;
             this.txtSurname.Name = "txtSurname";
+            this.txtSurname.ReadOnly = true;
             this.txtSurname.Size = new System.Drawing.Size(216, 28);
             this.txtSurname.TabIndex = 28;
             // 
@@ -283,6 +295,7 @@
             this.txtSpecialty.Location = new System.Drawing.Point(37, 296);
             this.txtSpecialty.Multiline = true;
             this.txtSpecialty.Name = "txtSpecialty";
+            this.txtSpecialty.ReadOnly = true;
             this.txtSpecialty.Size = new System.Drawing.Size(216, 28);
             this.txtSpecialty.TabIndex = 26;
             // 
@@ -323,6 +336,7 @@
             this.txtAdd1.Location = new System.Drawing.Point(37, 196);
             this.txtAdd1.Multiline = true;
             this.txtAdd1.Name = "txtAdd1";
+            this.txtAdd1.ReadOnly = true;
             this.txtAdd1.Size = new System.Drawing.Size(216, 28);
             this.txtAdd1.TabIndex = 22;
             // 
@@ -343,6 +357,7 @@
             this.txtEmail.Location = new System.Drawing.Point(37, 146);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(216, 28);
             this.txtEmail.TabIndex = 20;
             // 
@@ -363,6 +378,7 @@
             this.txtGender.Location = new System.Drawing.Point(37, 96);
             this.txtGender.Multiline = true;
             this.txtGender.Name = "txtGender";
+            this.txtGender.ReadOnly = true;
             this.txtGender.Size = new System.Drawing.Size(216, 28);
             this.txtGender.TabIndex = 18;
             // 
@@ -383,6 +399,7 @@
             this.txtForename.Location = new System.Drawing.Point(37, 46);
             this.txtForename.Multiline = true;
             this.txtForename.Name = "txtForename";
+            this.txtForename.ReadOnly = true;
             this.txtForename.Size = new System.Drawing.Size(216, 28);
             this.txtForename.TabIndex = 16;
             // 
@@ -394,6 +411,40 @@
             this.lblForename.Size = new System.Drawing.Size(54, 13);
             this.lblForename.TabIndex = 15;
             this.lblForename.Text = "Forename";
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(541, 46);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(224, 28);
+            this.btn_edit.TabIndex = 39;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Enabled = false;
+            this.btn_save.Location = new System.Drawing.Point(541, 96);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(224, 28);
+            this.btn_save.TabIndex = 39;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btnAppointments
+            // 
+            this.btnAppointments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAppointments.FlatAppearance.BorderSize = 0;
+            this.btnAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppointments.Location = new System.Drawing.Point(0, 232);
+            this.btnAppointments.Name = "btnAppointments";
+            this.btnAppointments.Size = new System.Drawing.Size(180, 60);
+            this.btnAppointments.TabIndex = 3;
+            this.btnAppointments.Text = "Appointments";
+            this.btnAppointments.UseVisualStyleBackColor = true;
             // 
             // frmDoctor
             // 
@@ -408,6 +459,7 @@
             this.Name = "frmDoctor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Doctor_form";
+            this.Load += new System.EventHandler(this.frmDoctor_Load);
             this.pnlDoctor1.ResumeLayout(false);
             this.pnlDoctor1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
@@ -449,5 +501,8 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.TextBox txtForename;
         private System.Windows.Forms.Label lblForename;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btnAppointments;
     }
 }
