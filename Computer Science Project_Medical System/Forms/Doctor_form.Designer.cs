@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.pnlDoctor1 = new System.Windows.Forms.Panel();
+            this.btnAppointments = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.welcomeLbl = new System.Windows.Forms.Label();
             this.userPicture = new System.Windows.Forms.PictureBox();
             this.btnExitDoctor = new System.Windows.Forms.Button();
             this.pnlDetails = new System.Windows.Forms.Panel();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
             this.txtDocid = new System.Windows.Forms.TextBox();
             this.lblDocid = new System.Windows.Forms.Label();
             this.txtPostcode = new System.Windows.Forms.TextBox();
@@ -58,9 +61,6 @@
             this.lblGender = new System.Windows.Forms.Label();
             this.txtForename = new System.Windows.Forms.TextBox();
             this.lblForename = new System.Windows.Forms.Label();
-            this.btn_edit = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btnAppointments = new System.Windows.Forms.Button();
             this.pnlDoctor1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.pnlDetails.SuspendLayout();
@@ -78,6 +78,19 @@
             this.pnlDoctor1.Name = "pnlDoctor1";
             this.pnlDoctor1.Size = new System.Drawing.Size(180, 600);
             this.pnlDoctor1.TabIndex = 0;
+            // 
+            // btnAppointments
+            // 
+            this.btnAppointments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAppointments.FlatAppearance.BorderSize = 0;
+            this.btnAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppointments.Location = new System.Drawing.Point(0, 232);
+            this.btnAppointments.Name = "btnAppointments";
+            this.btnAppointments.Size = new System.Drawing.Size(180, 60);
+            this.btnAppointments.TabIndex = 3;
+            this.btnAppointments.Text = "Appointments";
+            this.btnAppointments.UseVisualStyleBackColor = true;
             // 
             // btnDetails
             // 
@@ -161,6 +174,27 @@
             this.pnlDetails.Name = "pnlDetails";
             this.pnlDetails.Size = new System.Drawing.Size(802, 544);
             this.pnlDetails.TabIndex = 3;
+            // 
+            // btn_save
+            // 
+            this.btn_save.Enabled = false;
+            this.btn_save.Location = new System.Drawing.Point(541, 96);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(224, 28);
+            this.btn_save.TabIndex = 39;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(541, 46);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(224, 28);
+            this.btn_edit.TabIndex = 39;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // txtDocid
             // 
@@ -411,40 +445,6 @@
             this.lblForename.Size = new System.Drawing.Size(54, 13);
             this.lblForename.TabIndex = 15;
             this.lblForename.Text = "Forename";
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.Location = new System.Drawing.Point(541, 46);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(224, 28);
-            this.btn_edit.TabIndex = 39;
-            this.btn_edit.Text = "Edit";
-            this.btn_edit.UseVisualStyleBackColor = true;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
-            // 
-            // btn_save
-            // 
-            this.btn_save.Enabled = false;
-            this.btn_save.Location = new System.Drawing.Point(541, 96);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(224, 28);
-            this.btn_save.TabIndex = 39;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btnAppointments
-            // 
-            this.btnAppointments.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAppointments.FlatAppearance.BorderSize = 0;
-            this.btnAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppointments.Location = new System.Drawing.Point(0, 232);
-            this.btnAppointments.Name = "btnAppointments";
-            this.btnAppointments.Size = new System.Drawing.Size(180, 60);
-            this.btnAppointments.TabIndex = 3;
-            this.btnAppointments.Text = "Appointments";
-            this.btnAppointments.UseVisualStyleBackColor = true;
             // 
             // frmDoctor
             // 
