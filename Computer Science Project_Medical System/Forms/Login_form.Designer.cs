@@ -57,6 +57,7 @@
             this.btnDoctorSkip.TabIndex = 5;
             this.btnDoctorSkip.Text = "Doctor Skip";
             this.btnDoctorSkip.UseVisualStyleBackColor = false;
+            this.btnDoctorSkip.Click += new System.EventHandler(this.btnDoctorSkip_Click);
             // 
             // btnPatientSkip
             // 
