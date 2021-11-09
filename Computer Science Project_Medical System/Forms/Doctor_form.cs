@@ -34,12 +34,12 @@ namespace Computer_Science_Project_Medical_System
             Application.Exit();
         }
 
-        public void setAppointments()
+        private void setAppointments()
         {
 
         }
 
-        public void setDetails()
+        private void setDetails()
         {
             //Initiate Doctor class instance
             Doctor loggedin = new Doctor(Userid);

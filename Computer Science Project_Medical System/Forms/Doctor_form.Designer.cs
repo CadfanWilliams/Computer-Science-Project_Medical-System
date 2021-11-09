@@ -430,7 +430,7 @@
             this.txtForename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtForename.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtForename.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtForename.Location = new System.Drawing.Point(37, 46);
+            this.txtForename.Location = new System.Drawing.Point(37, 47);
             this.txtForename.Multiline = true;
             this.txtForename.Name = "txtForename";
             this.txtForename.ReadOnly = true;
