@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Computer_Science_Project_Medical_System.Forms.Child_Forms;
+using System;
 using System.Windows.Forms;
-using Computer_Science_Project_Medical_System.Forms.Child_Forms;
 namespace Computer_Science_Project_Medical_System
 {
     public partial class frmDoctor : Form
@@ -44,7 +44,7 @@ namespace Computer_Science_Project_Medical_System
 
         }
 
- 
+
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
@@ -76,7 +76,7 @@ namespace Computer_Science_Project_Medical_System
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            
+
         }
     }
 }
