@@ -62,35 +62,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments.cs" />
     <Compile Include="Doctor.cs" />
-    <Compile Include="Forms\Doctor_form.cs">
+    <Compile Include="Forms\Child Forms\frmAppointments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Doctor_form.Designer.cs">
+    <Compile Include="Forms\Child Forms\frmAppointments.Designer.cs">
+      <DependentUpon>frmAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Child Forms\frmDoctorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Child Forms\frmDoctorDetails.Designer.cs">
+      <DependentUpon>frmDoctorDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main Forms\Doctor_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main Forms\Doctor_form.Designer.cs">
       <DependentUpon>Doctor_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Login_form.cs">
+    <Compile Include="Forms\Main Forms\Login_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login_form.Designer.cs">
+    <Compile Include="Forms\Main Forms\Login_form.Designer.cs">
       <DependentUpon>Login_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Patient_form.cs">
+    <Compile Include="Forms\Main Forms\Patient_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Patient_form.designer.cs">
+    <Compile Include="Forms\Main Forms\Patient_form.designer.cs">
       <DependentUpon>Patient_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RegisterPatientDetails_Form.cs">
+    <Compile Include="Forms\Main Forms\RegisterPatientDetails_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegisterPatientDetails_Form.Designer.cs">
+    <Compile Include="Forms\Main Forms\RegisterPatientDetails_Form.Designer.cs">
       <DependentUpon>RegisterPatientDetails_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Register_form.cs">
+    <Compile Include="Forms\Main Forms\Register_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Register_form.Designer.cs">
+    <Compile Include="Forms\Main Forms\Register_form.Designer.cs">
       <DependentUpon>Register_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Medical_SystemDataSet.Designer.cs">
@@ -101,19 +114,22 @@
     <Compile Include="Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Doctor_form.resx">
+    <EmbeddedResource Include="Forms\Child Forms\frmDoctorDetails.resx">
+      <DependentUpon>frmDoctorDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main Forms\Doctor_form.resx">
       <DependentUpon>Doctor_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login_form.resx">
+    <EmbeddedResource Include="Forms\Main Forms\Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Patient_form.resx">
+    <EmbeddedResource Include="Forms\Main Forms\Patient_form.resx">
       <DependentUpon>Patient_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegisterPatientDetails_Form.resx">
+    <EmbeddedResource Include="Forms\Main Forms\RegisterPatientDetails_Form.resx">
       <DependentUpon>RegisterPatientDetails_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Register_form.resx">
+    <EmbeddedResource Include="Forms\Main Forms\Register_form.resx">
       <DependentUpon>Register_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

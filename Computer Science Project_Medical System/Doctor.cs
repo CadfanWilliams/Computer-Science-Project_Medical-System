@@ -25,6 +25,10 @@ namespace Computer_Science_Project_Medical_System
 
         //
         //Constructors
+        public Doctor()
+        {
+
+        }
         public Doctor(int userid)
         {
             this.Userid = userid;
