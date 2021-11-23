@@ -49,6 +49,8 @@ namespace Computer_Science_Project_Medical_System
         private void btnDetails_Click(object sender, EventArgs e)
         {
             openChildForm(new frmDoctorDetails());
+            btnDetails.ForeColor = System.Drawing.Color.Gray;
+            btnAppointments.ForeColor = System.Drawing.Color.DimGray;
 
         }
 
@@ -60,6 +62,8 @@ namespace Computer_Science_Project_Medical_System
         private void btnAppointments_Click(object sender, EventArgs e)
         {
             openChildForm(new frmAppointments());
+            btnDetails.ForeColor = System.Drawing.Color.DimGray;
+            btnAppointments.ForeColor = System.Drawing.Color.Gray; 
         }
 
         private void openChildForm(Form childForm)
