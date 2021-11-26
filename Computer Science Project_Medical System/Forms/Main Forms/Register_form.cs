@@ -14,7 +14,7 @@ namespace Computer_Science_Project_Medical_System.Forms
         public string UserType = "Patient";
         //
         //Connection to database
-        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
         SqlDataAdapter da = new SqlDataAdapter();
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace Computer_Science_Project_Medical_System.Forms
                     con.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tbl_users ([username], [password], [usertype]) values('" + txtUsername.Text + "','" + txtPassword.Text + "','" + UserType + "')";
+                    cmd.CommandText = "insert into tbl_users ([Username], [Password], [Usertype]) values('" + txtUsername.Text + "','" + txtPassword.Text + "','" + UserType + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
 

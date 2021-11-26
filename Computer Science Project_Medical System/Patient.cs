@@ -6,7 +6,7 @@ namespace Computer_Science_Project_Medical_System
     class Patient
     {
         //Connection to database
-        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
         //
         // Fields
         public int patientid;
@@ -36,7 +36,7 @@ namespace Computer_Science_Project_Medical_System
         {
             //Gets the details of the patient
             //SQL Commands
-            string Query = "SELECT * FROM tbl_patients WHERE userid = '" + Userid + "'";
+            string Query = "SELECT * FROM tbl_patients WHERE UserID = '" + Userid + "'";
             SqlCommand cmd = new SqlCommand(Query, con);
 
             con.Open();

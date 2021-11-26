@@ -48,7 +48,7 @@ namespace Computer_Science_Project_Medical_System
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmDoctorDetails());
+            openChildForm(new frmDoctorDetails(Userid));
 
         }
 

@@ -7,7 +7,7 @@ namespace Computer_Science_Project_Medical_System.Forms
     public partial class RegisterPatientDetails_Form : Form
     {
         //Connection to database
-        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
         SqlDataAdapter da = new SqlDataAdapter();
         //
         //Constructors
@@ -48,12 +48,12 @@ namespace Computer_Science_Project_Medical_System.Forms
                     cmd.Connection = con;
                     if (usertype == "Patient")
                     {
-                        cmd.CommandText = "insert into tbl_patients ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
+                        cmd.CommandText = "insert into tbl_patients ([Forename], [Surname], [Gender], [DOB], [Email], [Phonenumber], [Addressline1], [Addressline2], [Addressline3], [Postcode],[Userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
 
                     }
                     else if (usertype == "Doctor")
                     {
-                        cmd.CommandText = "insert into tbl_doctors ([forename], [surname], [gender], [dob], [email], [phonenumber], [addressline1], [addressline2], [addressline3], [postcode],[userid],[specialty]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "','" + "test" + "')";
+                        cmd.CommandText = "insert into tbl_doctors ([Forename], [Surname], [Gender], [DOB], [Email], [Phonenumber], [Addressline1], [Addressline2], [Addressline3], [Postcode],[Userid],[Specialty]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "','" + "test" + "')";
 
                     }
                     cmd.ExecuteNonQuery();

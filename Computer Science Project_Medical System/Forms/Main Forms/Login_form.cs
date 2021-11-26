@@ -18,7 +18,7 @@ namespace Computer_Science_Project_Medical_System
         }
 
         //Connection to database
-        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=Medical System;Trusted_Connection=True;");
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
         //
         //
         //Opens register form
