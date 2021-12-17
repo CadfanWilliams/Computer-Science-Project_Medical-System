@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.pnlDoctor1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReferrals = new System.Windows.Forms.Button();
             this.btnAppointments = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.welcomeLbl = new System.Windows.Forms.Label();
+            this.userPicture = new System.Windows.Forms.PictureBox();
             this.btnExitDoctor = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReferrals = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.userPicture = new System.Windows.Forms.PictureBox();
             this.pnlDoctor1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDoctor1
@@ -60,12 +60,18 @@
             this.pnlDoctor1.Size = new System.Drawing.Size(180, 600);
             this.pnlDoctor1.TabIndex = 0;
             // 
-            // panel1
+            // btnReferrals
             // 
-            this.panel1.Location = new System.Drawing.Point(179, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(821, 28);
-            this.panel1.TabIndex = 4;
+            this.btnReferrals.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReferrals.FlatAppearance.BorderSize = 0;
+            this.btnReferrals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReferrals.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnReferrals.Location = new System.Drawing.Point(0, 412);
+            this.btnReferrals.Name = "btnReferrals";
+            this.btnReferrals.Size = new System.Drawing.Size(180, 80);
+            this.btnReferrals.TabIndex = 5;
+            this.btnReferrals.Text = "Referrals";
+            this.btnReferrals.UseVisualStyleBackColor = false;
             // 
             // btnAppointments
             // 
@@ -96,6 +102,27 @@
             this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(179, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(821, 28);
+            this.panel1.TabIndex = 4;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Location = new System.Drawing.Point(0, 172);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(180, 80);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnAppointments_Click);
+            // 
             // welcomeLbl
             // 
             this.welcomeLbl.AutoSize = true;
@@ -106,6 +133,16 @@
             this.welcomeLbl.Size = new System.Drawing.Size(81, 17);
             this.welcomeLbl.TabIndex = 1;
             this.welcomeLbl.Text = "Welcome ...";
+            // 
+            // userPicture
+            // 
+            this.userPicture.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userPicture.Location = new System.Drawing.Point(0, 0);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(180, 155);
+            this.userPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPicture.TabIndex = 0;
+            this.userPicture.TabStop = false;
             // 
             // btnExitDoctor
             // 
@@ -139,44 +176,6 @@
             this.panel2.Size = new System.Drawing.Size(820, 31);
             this.panel2.TabIndex = 4;
             // 
-            // btnReferrals
-            // 
-            this.btnReferrals.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReferrals.FlatAppearance.BorderSize = 0;
-            this.btnReferrals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReferrals.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.btnReferrals.Location = new System.Drawing.Point(0, 412);
-            this.btnReferrals.Name = "btnReferrals";
-            this.btnReferrals.Size = new System.Drawing.Size(180, 80);
-            this.btnReferrals.TabIndex = 5;
-            this.btnReferrals.Text = "Referrals";
-            this.btnReferrals.UseVisualStyleBackColor = false;
-            // 
-            // btnHome
-            // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(0, 172);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(180, 80);
-            this.btnHome.TabIndex = 3;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnAppointments_Click);
-            // 
-            // userPicture
-            // 
-            this.userPicture.Dock = System.Windows.Forms.DockStyle.Top;
-            this.userPicture.Image = global::Computer_Science_Project_Medical_System.Properties.Resources.user_icon;
-            this.userPicture.Location = new System.Drawing.Point(0, 0);
-            this.userPicture.Name = "userPicture";
-            this.userPicture.Size = new System.Drawing.Size(180, 155);
-            this.userPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPicture.TabIndex = 0;
-            this.userPicture.TabStop = false;
-            // 
             // frmDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,8 +192,8 @@
             this.Load += new System.EventHandler(this.frmDoctor_Load);
             this.pnlDoctor1.ResumeLayout(false);
             this.pnlDoctor1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
