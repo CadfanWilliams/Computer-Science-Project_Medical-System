@@ -27,6 +27,8 @@ namespace Computer_Science_Project_Medical_System
         {
             InitializeComponent();
             this.Userid = userid;
+            Doctor doctorLoggedIn = new Doctor(userid);
+            welcomeLbl.Text = welcomeLbl.Text + " " + doctorLoggedIn.forename;
         }
         public frmDoctor()
         {
@@ -43,9 +45,6 @@ namespace Computer_Science_Project_Medical_System
         {
 
         }
-
-
-
         private void btnDetails_Click(object sender, EventArgs e)
         {
             openChildForm(new frmDoctorDetails(Userid));

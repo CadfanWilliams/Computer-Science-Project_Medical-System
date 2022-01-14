@@ -130,9 +130,9 @@
             this.welcomeLbl.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.welcomeLbl.Location = new System.Drawing.Point(0, 155);
             this.welcomeLbl.Name = "welcomeLbl";
-            this.welcomeLbl.Size = new System.Drawing.Size(81, 17);
+            this.welcomeLbl.Size = new System.Drawing.Size(65, 17);
             this.welcomeLbl.TabIndex = 1;
-            this.welcomeLbl.Text = "Welcome ...";
+            this.welcomeLbl.Text = "Welcome";
             // 
             // userPicture
             // 
@@ -160,6 +160,7 @@
             // 
             // panelChildForm
             // 
+            this.panelChildForm.BackColor = System.Drawing.Color.LightGray;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(180, 0);
             this.panelChildForm.Name = "panelChildForm";

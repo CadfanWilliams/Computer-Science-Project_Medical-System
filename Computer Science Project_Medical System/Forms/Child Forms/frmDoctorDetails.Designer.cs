@@ -68,16 +68,17 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // btn_edit
             // 
+            this.btn_edit.BackColor = System.Drawing.Color.White;
             this.btn_edit.Location = new System.Drawing.Point(542, 96);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(224, 28);
             this.btn_edit.TabIndex = 64;
             this.btn_edit.Text = "Edit";
-            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.UseVisualStyleBackColor = false;
             // 
             // txtDocid
             // 
-            this.txtDocid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtDocid.BackColor = System.Drawing.Color.Silver;
             this.txtDocid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDocid.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocid.Location = new System.Drawing.Point(285, 346);
@@ -98,7 +99,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtPostcode
             // 
-            this.txtPostcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPostcode.BackColor = System.Drawing.Color.Silver;
             this.txtPostcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPostcode.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPostcode.Location = new System.Drawing.Point(285, 296);
@@ -118,7 +119,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtAdd2
             // 
-            this.txtAdd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtAdd2.BackColor = System.Drawing.Color.Silver;
             this.txtAdd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdd2.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdd2.Location = new System.Drawing.Point(285, 246);
@@ -139,7 +140,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtPhonenumber
             // 
-            this.txtPhonenumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPhonenumber.BackColor = System.Drawing.Color.Silver;
             this.txtPhonenumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhonenumber.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhonenumber.Location = new System.Drawing.Point(285, 196);
@@ -160,7 +161,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtDob
             // 
-            this.txtDob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtDob.BackColor = System.Drawing.Color.Silver;
             this.txtDob.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDob.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDob.Location = new System.Drawing.Point(285, 146);
@@ -181,7 +182,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtSurname
             // 
-            this.txtSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtSurname.BackColor = System.Drawing.Color.Silver;
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSurname.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.Location = new System.Drawing.Point(285, 96);
@@ -202,7 +203,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtSpecialty
             // 
-            this.txtSpecialty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtSpecialty.BackColor = System.Drawing.Color.Silver;
             this.txtSpecialty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSpecialty.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSpecialty.Location = new System.Drawing.Point(38, 346);
@@ -223,7 +224,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtAdd3
             // 
-            this.txtAdd3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtAdd3.BackColor = System.Drawing.Color.Silver;
             this.txtAdd3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdd3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdd3.Location = new System.Drawing.Point(38, 296);
@@ -243,7 +244,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtAdd1
             // 
-            this.txtAdd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtAdd1.BackColor = System.Drawing.Color.Silver;
             this.txtAdd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdd1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdd1.Location = new System.Drawing.Point(38, 246);
@@ -264,7 +265,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtEmail.BackColor = System.Drawing.Color.Silver;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(38, 196);
@@ -285,7 +286,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtGender
             // 
-            this.txtGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtGender.BackColor = System.Drawing.Color.Silver;
             this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGender.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.Location = new System.Drawing.Point(38, 146);
@@ -306,7 +307,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // txtForename
             // 
-            this.txtForename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtForename.BackColor = System.Drawing.Color.Silver;
             this.txtForename.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtForename.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtForename.Location = new System.Drawing.Point(38, 97);
@@ -325,10 +326,11 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.lblForename.TabIndex = 40;
             this.lblForename.Text = "Forename";
             // 
-            // frmAppointments
+            // frmDoctorDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_edit);
@@ -356,7 +358,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.txtForename);
             this.Controls.Add(this.lblForename);
-            this.Name = "frmAppointments";
+            this.Name = "frmDoctorDetails";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

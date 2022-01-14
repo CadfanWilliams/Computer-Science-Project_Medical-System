@@ -124,7 +124,7 @@ namespace Computer_Science_Project_Medical_System
         private void btnDoctorSkip_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmDoctor frmDoctor = new frmDoctor();
+            frmDoctor frmDoctor = new frmDoctor(5);
             frmDoctor.Show();
 
         }
