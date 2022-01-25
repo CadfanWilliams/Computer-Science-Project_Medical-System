@@ -9,8 +9,8 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         public frmDoctorDetails(int Userid)
         {
             InitializeComponent();
-            //this.userid = Userid;
-            //setDetails();
+            this.userid = Userid;
+            setDetails();
 
 
         }

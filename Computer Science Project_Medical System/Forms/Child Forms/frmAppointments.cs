@@ -11,6 +11,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         public frmAppointments()
         {
             InitializeComponent();
+            getTodayDoctorAppointments("5");
         }
 
         #region methods
@@ -19,16 +20,21 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         {
             //gets the appointments that are within the coming days
             //SQL
-            string date = DateTime.Now.ToString("d");
-            string query = "SELECT * FROM tbl_appointments WHERE Datestart  = '" + date + "' AND doctorid = '" + doctorID +"'";
+            string date = DateTime.Now.ToString();
+            string query = "SELECT * FROM tbl_appointments WHERE DoctorID = '" + doctorID +"'";
             //this should in theory bring up a list of all appointments that matches system date
-
-            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            // [Date Start]  = '" + date + "' AND
+            using(SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+                sqlcon.Close();
+                sqlda.Dispose();
+
+                
             }
         }
         #endregion
