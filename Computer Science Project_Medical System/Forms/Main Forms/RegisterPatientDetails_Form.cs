@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace Computer_Science_Project_Medical_System.Forms
 {
     public partial class RegisterPatientDetails_Form : Form
@@ -37,7 +37,7 @@ namespace Computer_Science_Project_Medical_System.Forms
         private void btnRegister_Click(object sender, EventArgs e)
         {
 
-            if (checkpresence() == false)
+            if (checkpresence())
             {
 
                 try
@@ -64,6 +64,7 @@ namespace Computer_Science_Project_Medical_System.Forms
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
+                    Thread.Sleep(10000);                   
                     Application.Exit();
                 }
             }
@@ -73,15 +74,13 @@ namespace Computer_Science_Project_Medical_System.Forms
         //Presence Check
         public bool checkpresence()
         {
-            if (txtFirstname.Text == null || txtSurname.Text == null || txtEmail.Text == null || txtPhone.Text == null || txtAddress1.Text == null || txtAddress2.Text == null || txtAddress3.Text == null || txtPostcode.Text == null || dtpDob == null || comboBox1 == null)
+            if (txtFirstname.Text == null || txtSurname.Text == null || txtEmail.Text == null || txtPhone.Text == null || txtAddress1.Text == null
+             || txtAddress2.Text == null || txtAddress3.Text == null || txtPostcode.Text == null || dtpDob == null || comboBox1 == null)
             {
                 MessageBox.Show("You must fill all the boxes");
-                return true;
-            }
-            else
-            {
                 return false;
             }
+            else{return true;}
         }
         public void getuserid(string username1)
         {

@@ -62,7 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appointments.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="Forms\Child Forms\frmAppointments.cs">
       <SubType>Form</SubType>
@@ -109,6 +108,9 @@
     <Compile Include="Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Child Forms\frmAppointments.resx">
+      <DependentUpon>frmAppointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Child Forms\frmDoctorDetails.resx">
       <DependentUpon>frmDoctorDetails.cs</DependentUpon>
     </EmbeddedResource>

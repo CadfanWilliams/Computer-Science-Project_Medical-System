@@ -54,13 +54,12 @@ namespace Computer_Science_Project_Medical_System
         {
 
         }
-
         private void btnAppointments_Click(object sender, EventArgs e)
         {
             openChildForm(new frmAppointments());
         }
 
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             //method for opening a form onto a panel
             //for it to be called = openChildForm(new frmAppointment()); - example
