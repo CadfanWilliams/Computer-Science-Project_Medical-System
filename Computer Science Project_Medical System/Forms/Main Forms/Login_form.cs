@@ -83,50 +83,36 @@ namespace Computer_Science_Project_Medical_System
         }
 
 
-        //Clears all textboxes
+
         private void btnClear_Click(object sender, EventArgs e)
         {
+            //Clears all textboxes
             txtUsername.Text = "";
             txtPassword.Text = "";
             txtUsername.Focus();
         }
 
-        //Changes the visibility of the password textfields
         private void CheckbxShowPas_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckbxShowPas.Checked)
-            {
-                txtPassword.PasswordChar = '\0';
-
-            }
-            else
-            {
-                txtPassword.PasswordChar = '•';
-
-            }
+            //Changes the visibility of the password textfield
+            txtPassword.PasswordChar = CheckbxShowPas.Checked == true ? '\0' : '•';
         }
-
 
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
-
             frmPatient frm = new frmPatient(1);
             frm.ShowDialog();
             this.Hide();
         }
 
-        //Button To exit the form, closes whole application
         private void lblExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        { this.Close(); }
 
         private void btnDoctorSkip_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmDoctor frmDoctor = new frmDoctor(5);
             frmDoctor.Show();
-
         }
     }
 }

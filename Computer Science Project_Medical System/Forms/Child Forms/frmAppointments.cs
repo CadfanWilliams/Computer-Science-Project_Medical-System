@@ -1,30 +1,33 @@
-﻿using System.Windows.Forms;
-using System;
-using System.Data.SqlClient;
+﻿using System;
 using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
 {
     public partial class frmAppointments : Form
+
     {
+        public int DoctorID;
         string connectionString = @"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;";
-        public frmAppointments()
+        public frmAppointments(int doctorid)
         {
+            this.DoctorID = doctorid;
             InitializeComponent();
-            getTodayDoctorAppointments("5");
+            getTodayDoctorAppointments(DoctorID);
         }
 
         #region methods
         //there should be a method that saves all the appointment ids
-        public void getTodayDoctorAppointments(string doctorID)
+        public void getTodayDoctorAppointments(int doctorID)
         {
             //gets the appointments that are within the coming days
             //SQL
             string date = DateTime.Now.ToString();
-            string query = "SELECT * FROM tbl_appointments WHERE DoctorID = '" + doctorID +"'";
+            string query = "SELECT * FROM tbl_appointments WHERE DoctorID = '" + doctorID + "'";
             //this should in theory bring up a list of all appointments that matches system date
             // [Date Start]  = '" + date + "' AND
-            using(SqlConnection sqlcon = new SqlConnection(connectionString))
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlda = new SqlDataAdapter(query, sqlcon);
@@ -34,7 +37,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
                 sqlcon.Close();
                 sqlda.Dispose();
 
-                
+
             }
         }
         #endregion

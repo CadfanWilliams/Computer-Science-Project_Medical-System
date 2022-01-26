@@ -50,8 +50,6 @@ namespace Computer_Science_Project_Medical_System.Forms
                     Application.Exit();
                 }
 
-
-                MessageBox.Show("Your Account has been successfully created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -92,14 +90,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
         private void checkbxDoctor_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkbxDoctor.Checked == true)
-            {
-                UserType = "Doctor";
-            }
-            else
-            {
-                UserType = "Patient";
-            }
+            UserType = checkbxDoctor.Checked == true ? "Doctor" : "Patient";
         }
     }
 }

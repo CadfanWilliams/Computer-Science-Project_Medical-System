@@ -40,23 +40,13 @@ namespace Computer_Science_Project_Medical_System
             this.Close();
             Application.Exit();
         }
-
-        private void setAppointments()
-        {
-
-        }
         private void btnDetails_Click(object sender, EventArgs e)
         {
             openChildForm(new frmDoctorDetails(Userid));
         }
-
-        private void frmDoctor_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btnAppointments_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmAppointments());
+            openChildForm(new frmAppointments(doctorid));
         }
 
         public void openChildForm(Form childForm)

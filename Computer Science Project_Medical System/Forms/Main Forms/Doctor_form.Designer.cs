@@ -174,7 +174,6 @@
             this.Name = "frmDoctor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Doctor_form";
-            this.Load += new System.EventHandler(this.frmDoctor_Load);
             this.pnlDoctor1.ResumeLayout(false);
             this.pnlDoctor1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();

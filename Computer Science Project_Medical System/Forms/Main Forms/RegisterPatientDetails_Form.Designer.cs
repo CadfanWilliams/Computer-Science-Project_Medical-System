@@ -371,7 +371,6 @@ namespace Computer_Science_Project_Medical_System.Forms
             this.Name = "RegisterPatientDetails_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterPatientDetails_Form";
-            this.Load += new System.EventHandler(this.RegisterPatientDetails_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

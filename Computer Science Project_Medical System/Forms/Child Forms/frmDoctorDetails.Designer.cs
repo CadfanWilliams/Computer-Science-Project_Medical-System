@@ -59,7 +59,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(542, 146);
+            this.btn_save.Location = new System.Drawing.Point(577, 158);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(224, 28);
             this.btn_save.TabIndex = 65;
@@ -69,7 +69,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // btn_edit
             // 
             this.btn_edit.BackColor = System.Drawing.Color.White;
-            this.btn_edit.Location = new System.Drawing.Point(542, 96);
+            this.btn_edit.Location = new System.Drawing.Point(577, 108);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(224, 28);
             this.btn_edit.TabIndex = 64;
@@ -81,7 +81,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtDocid.BackColor = System.Drawing.Color.Silver;
             this.txtDocid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDocid.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocid.Location = new System.Drawing.Point(285, 346);
+            this.txtDocid.Location = new System.Drawing.Point(320, 358);
             this.txtDocid.Multiline = true;
             this.txtDocid.Name = "txtDocid";
             this.txtDocid.ReadOnly = true;
@@ -91,7 +91,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblDocid
             // 
             this.lblDocid.AutoSize = true;
-            this.lblDocid.Location = new System.Drawing.Point(282, 326);
+            this.lblDocid.Location = new System.Drawing.Point(317, 338);
             this.lblDocid.Name = "lblDocid";
             this.lblDocid.Size = new System.Drawing.Size(53, 13);
             this.lblDocid.TabIndex = 62;
@@ -102,7 +102,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtPostcode.BackColor = System.Drawing.Color.Silver;
             this.txtPostcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPostcode.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostcode.Location = new System.Drawing.Point(285, 296);
+            this.txtPostcode.Location = new System.Drawing.Point(320, 308);
             this.txtPostcode.Multiline = true;
             this.txtPostcode.Name = "txtPostcode";
             this.txtPostcode.Size = new System.Drawing.Size(216, 28);
@@ -111,7 +111,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblPostcode
             // 
             this.lblPostcode.AutoSize = true;
-            this.lblPostcode.Location = new System.Drawing.Point(282, 276);
+            this.lblPostcode.Location = new System.Drawing.Point(317, 288);
             this.lblPostcode.Name = "lblPostcode";
             this.lblPostcode.Size = new System.Drawing.Size(56, 13);
             this.lblPostcode.TabIndex = 60;
@@ -122,7 +122,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtAdd2.BackColor = System.Drawing.Color.Silver;
             this.txtAdd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdd2.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdd2.Location = new System.Drawing.Point(285, 246);
+            this.txtAdd2.Location = new System.Drawing.Point(320, 258);
             this.txtAdd2.Multiline = true;
             this.txtAdd2.Name = "txtAdd2";
             this.txtAdd2.ReadOnly = true;
@@ -132,7 +132,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblAdd2
             // 
             this.lblAdd2.AutoSize = true;
-            this.lblAdd2.Location = new System.Drawing.Point(282, 226);
+            this.lblAdd2.Location = new System.Drawing.Point(317, 238);
             this.lblAdd2.Name = "lblAdd2";
             this.lblAdd2.Size = new System.Drawing.Size(77, 13);
             this.lblAdd2.TabIndex = 58;
@@ -143,7 +143,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtPhonenumber.BackColor = System.Drawing.Color.Silver;
             this.txtPhonenumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhonenumber.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhonenumber.Location = new System.Drawing.Point(285, 196);
+            this.txtPhonenumber.Location = new System.Drawing.Point(320, 208);
             this.txtPhonenumber.Multiline = true;
             this.txtPhonenumber.Name = "txtPhonenumber";
             this.txtPhonenumber.ReadOnly = true;
@@ -153,7 +153,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblPhonenumber
             // 
             this.lblPhonenumber.AutoSize = true;
-            this.lblPhonenumber.Location = new System.Drawing.Point(282, 176);
+            this.lblPhonenumber.Location = new System.Drawing.Point(317, 188);
             this.lblPhonenumber.Name = "lblPhonenumber";
             this.lblPhonenumber.Size = new System.Drawing.Size(78, 13);
             this.lblPhonenumber.TabIndex = 56;
@@ -164,7 +164,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtDob.BackColor = System.Drawing.Color.Silver;
             this.txtDob.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDob.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDob.Location = new System.Drawing.Point(285, 146);
+            this.txtDob.Location = new System.Drawing.Point(320, 158);
             this.txtDob.Multiline = true;
             this.txtDob.Name = "txtDob";
             this.txtDob.ReadOnly = true;
@@ -174,7 +174,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblDob
             // 
             this.lblDob.AutoSize = true;
-            this.lblDob.Location = new System.Drawing.Point(282, 126);
+            this.lblDob.Location = new System.Drawing.Point(317, 138);
             this.lblDob.Name = "lblDob";
             this.lblDob.Size = new System.Drawing.Size(66, 13);
             this.lblDob.TabIndex = 54;
@@ -185,7 +185,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtSurname.BackColor = System.Drawing.Color.Silver;
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSurname.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurname.Location = new System.Drawing.Point(285, 96);
+            this.txtSurname.Location = new System.Drawing.Point(320, 108);
             this.txtSurname.Multiline = true;
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.ReadOnly = true;
@@ -195,7 +195,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(282, 76);
+            this.lblSurname.Location = new System.Drawing.Point(317, 88);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(49, 13);
             this.lblSurname.TabIndex = 52;
@@ -206,7 +206,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtSpecialty.BackColor = System.Drawing.Color.Silver;
             this.txtSpecialty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSpecialty.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpecialty.Location = new System.Drawing.Point(38, 346);
+            this.txtSpecialty.Location = new System.Drawing.Point(73, 358);
             this.txtSpecialty.Multiline = true;
             this.txtSpecialty.Name = "txtSpecialty";
             this.txtSpecialty.ReadOnly = true;
@@ -216,7 +216,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblSpecialty
             // 
             this.lblSpecialty.AutoSize = true;
-            this.lblSpecialty.Location = new System.Drawing.Point(35, 326);
+            this.lblSpecialty.Location = new System.Drawing.Point(70, 338);
             this.lblSpecialty.Name = "lblSpecialty";
             this.lblSpecialty.Size = new System.Drawing.Size(50, 13);
             this.lblSpecialty.TabIndex = 50;
@@ -227,7 +227,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtAdd3.BackColor = System.Drawing.Color.Silver;
             this.txtAdd3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdd3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdd3.Location = new System.Drawing.Point(38, 296);
+            this.txtAdd3.Location = new System.Drawing.Point(73, 308);
             this.txtAdd3.Multiline = true;
             this.txtAdd3.Name = "txtAdd3";
             this.txtAdd3.Size = new System.Drawing.Size(216, 28);
@@ -236,7 +236,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblAdd3
             // 
             this.lblAdd3.AutoSize = true;
-            this.lblAdd3.Location = new System.Drawing.Point(35, 276);
+            this.lblAdd3.Location = new System.Drawing.Point(70, 288);
             this.lblAdd3.Name = "lblAdd3";
             this.lblAdd3.Size = new System.Drawing.Size(77, 13);
             this.lblAdd3.TabIndex = 48;
@@ -247,7 +247,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtAdd1.BackColor = System.Drawing.Color.Silver;
             this.txtAdd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdd1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdd1.Location = new System.Drawing.Point(38, 246);
+            this.txtAdd1.Location = new System.Drawing.Point(73, 258);
             this.txtAdd1.Multiline = true;
             this.txtAdd1.Name = "txtAdd1";
             this.txtAdd1.ReadOnly = true;
@@ -257,7 +257,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblAdd1
             // 
             this.lblAdd1.AutoSize = true;
-            this.lblAdd1.Location = new System.Drawing.Point(35, 226);
+            this.lblAdd1.Location = new System.Drawing.Point(70, 238);
             this.lblAdd1.Name = "lblAdd1";
             this.lblAdd1.Size = new System.Drawing.Size(77, 13);
             this.lblAdd1.TabIndex = 46;
@@ -268,7 +268,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtEmail.BackColor = System.Drawing.Color.Silver;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(38, 196);
+            this.txtEmail.Location = new System.Drawing.Point(73, 208);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
@@ -278,7 +278,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(35, 176);
+            this.lblEmail.Location = new System.Drawing.Point(70, 188);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 44;
@@ -289,7 +289,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtGender.BackColor = System.Drawing.Color.Silver;
             this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGender.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGender.Location = new System.Drawing.Point(38, 146);
+            this.txtGender.Location = new System.Drawing.Point(73, 158);
             this.txtGender.Multiline = true;
             this.txtGender.Name = "txtGender";
             this.txtGender.ReadOnly = true;
@@ -299,7 +299,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(35, 126);
+            this.lblGender.Location = new System.Drawing.Point(70, 138);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(42, 13);
             this.lblGender.TabIndex = 42;
@@ -310,7 +310,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.txtForename.BackColor = System.Drawing.Color.Silver;
             this.txtForename.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtForename.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtForename.Location = new System.Drawing.Point(38, 97);
+            this.txtForename.Location = new System.Drawing.Point(73, 109);
             this.txtForename.Multiline = true;
             this.txtForename.Name = "txtForename";
             this.txtForename.ReadOnly = true;
@@ -320,7 +320,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             // lblForename
             // 
             this.lblForename.AutoSize = true;
-            this.lblForename.Location = new System.Drawing.Point(35, 76);
+            this.lblForename.Location = new System.Drawing.Point(70, 88);
             this.lblForename.Name = "lblForename";
             this.lblForename.Size = new System.Drawing.Size(54, 13);
             this.lblForename.TabIndex = 40;
@@ -331,7 +331,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(877, 527);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.txtDocid);

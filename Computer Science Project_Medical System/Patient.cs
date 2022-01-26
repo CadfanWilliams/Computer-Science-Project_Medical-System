@@ -48,7 +48,7 @@ namespace Computer_Science_Project_Medical_System
                 this.forename = DataReader.GetString(1);
                 this.surname = DataReader.GetString(2);
                 this.gender = DataReader.GetString(3);
-                this.dob = DataReader.GetDateTime(4).ToShortDateString();
+                this.dob = DataReader.GetString(4);
                 this.email = DataReader.GetString(5);
                 this.phonenumber = DataReader.GetString(6);
                 this.addressline1 = DataReader.GetString(7);
