@@ -33,6 +33,7 @@ namespace Computer_Science_Project_Medical_System
         {
             //Variables for method
             string usertype;
+            int userid;
             string sqlquery1; //gets record from database matching user entry
             //Sql Commands
             sqlquery1 = "SELECT * FROM tbl_users WHERE username = '" + txtUsername.Text + "' and password= '" + txtPassword.Text + "'";
@@ -48,18 +49,17 @@ namespace Computer_Science_Project_Medical_System
                 if (DataReader.HasRows)
                 {
                     usertype = DataReader.GetString(3);
-                    int userid = DataReader.GetInt32(0);
+                    userid = DataReader.GetInt32(0);
+
                     if (usertype == "Patient")
                     {
                         new frmPatient(userid).Show();
                         this.Hide();
-
                     }
                     else if (usertype == "Doctor")
                     {
                         new frmDoctor(userid).Show();
                         this.Hide();
-
                     }
                 }
                 else
@@ -106,7 +106,7 @@ namespace Computer_Science_Project_Medical_System
         }
 
         private void lblExit_Click(object sender, EventArgs e)
-        { this.Close(); }
+        { Application.Exit(); }
 
         private void btnDoctorSkip_Click(object sender, EventArgs e)
         {

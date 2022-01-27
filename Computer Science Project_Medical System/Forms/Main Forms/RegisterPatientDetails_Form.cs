@@ -47,7 +47,7 @@ namespace Computer_Science_Project_Medical_System.Forms
                     }
                     else if (usertype == "Doctor")
                     {
-                        cmd.CommandText = "insert into tbl_doctors ([Forename], [Surname], [Gender], [DOB], [Email], [Phonenumber], [Addressline1], [Addressline2], [Addressline3], [Postcode],[Userid],[Specialty]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date.ToString() + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "','" + "test" + "')";
+                        cmd.CommandText = "insert into tbl_doctors ([Forename], [Surname], [Gender], [DOB], [Email], [Phonenumber], [Addressline1], [Addressline2], [Addressline3], [Postcode],[Userid],[Specialty]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date.ToString() + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "','" + "Heart Surgon" + "')";
 
                     }
                     cmd.ExecuteNonQuery();
@@ -58,7 +58,6 @@ namespace Computer_Science_Project_Medical_System.Forms
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error " + ex);
-                    Thread.Sleep(10000);
                     Application.Exit();
                 }
             }
