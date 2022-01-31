@@ -46,7 +46,7 @@ namespace Computer_Science_Project_Medical_System
         }
         private void btnAppointments_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmAppointments(doctorid));
+            openChildForm(new frmAppointments(Userid));
         }
 
         public void openChildForm(Form childForm)

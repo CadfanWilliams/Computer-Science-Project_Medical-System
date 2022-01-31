@@ -8,27 +8,22 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
     public partial class frmAppointments : Form
 
     {
+        public int UserID;
         public int DoctorID;
+        public string combobox1state;
         string connectionString = @"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;";
-        public frmAppointments(int doctorid)
-        {
-            this.DoctorID = doctorid;
+        public frmAppointments(int userid)
+        {       
             InitializeComponent();
-            getTodayDoctorAppointments(DoctorID);
-            //label1.Text = DateTime.Now.ToString("d");
+            this.UserID = userid;
+            Appointments();
+            
         }
 
         #region methods
-        //there should be a method that saves all the appointment ids
-        public void getTodayDoctorAppointments(int doctorID)
+
+        public void fillDataGrid(string query)
         {
-            //gets the appointments that are within the coming days
-            //SQL
-            string date = DateTime.Now.ToString("d");
-            string query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + date + "' AND [DoctorID] = '" + doctorID + "'";
-            //
-            //this should in theory bring up a list of all appointments that matches system date
-            // [Date Start]  = '" + date + "' AND
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
@@ -38,15 +33,42 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
                 dataGridView1.DataSource = dtbl;
                 sqlcon.Close();
                 sqlda.Dispose();
-
-
             }
+        }
+
+        public void Appointments()
+        {
+            Doctor doctorLoggedIn = new Doctor(UserID);
+            string Query;
+            switch (combobox1state) 
+            {
+                //Case Today will get all appointments on the current day
+                case "Today" :
+                    Query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    break;
+                //Case This week will get all appointments from the next 7 days
+                case "This week":
+                    Query = "Select * FROM tbl_appointments WHERE [Date Start] >= '" + DateTime.Now.ToString("d") + "' AND [Date Start] <= '" + DateTime.Now.AddDays(7).ToString() + "'";
+                    break;
+                //Case This month will get the remaining appointments in the month
+                case "This Month":
+                    break;
+                //Case All will get all the appointments
+                case "All":
+                    break;
+                default:
+                    Query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    break;
+            }
+            fillDataGrid(Query);
+
         }
         #endregion
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            combobox1state = comboBox1.Text.ToString();
+            label1.Text = combobox1state;
         }
     }
 }

@@ -55,7 +55,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             txtAdd3.Text = loggedin.addressline3;
             txtPostcode.Text = loggedin.postcode;
             txtSpecialty.Text = loggedin.specialty;
-            txtDocid.Text = loggedin.Userid.ToString();
+            txtDocid.Text = loggedin.doctorid.ToString();
         }
     }
 }
