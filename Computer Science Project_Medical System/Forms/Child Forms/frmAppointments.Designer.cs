@@ -32,6 +32,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +70,22 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
+            // lblClose
+            // 
+            this.lblClose.AutoSize = true;
+            this.lblClose.Location = new System.Drawing.Point(774, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(14, 13);
+            this.lblClose.TabIndex = 3;
+            this.lblClose.Text = "X";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
+            // 
             // frmAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
@@ -90,5 +102,6 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblClose;
     }
 }

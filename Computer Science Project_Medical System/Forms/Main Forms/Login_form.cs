@@ -24,9 +24,8 @@ namespace Computer_Science_Project_Medical_System
         //Opens register form
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
-            frmRegister frmRegister = new frmRegister();
-            frmRegister.Show();
-            this.Hide();
+            new frmRegister().Show();
+            this.Dispose();
         }
         // 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -38,11 +37,8 @@ namespace Computer_Science_Project_Medical_System
             //Sql Commands
             sqlquery1 = "SELECT * FROM tbl_users WHERE username = '" + txtUsername.Text + "' and password= '" + txtPassword.Text + "'";
             SqlCommand cmd = new SqlCommand(sqlquery1, con);
-            //Opens the connection / connects to database
             con.Open();
-            //
             SqlDataReader DataReader = cmd.ExecuteReader();
-            //
             while (DataReader.Read())
             {
                 //DataReader must have > 1 rows to continue
@@ -100,8 +96,7 @@ namespace Computer_Science_Project_Medical_System
 
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
-            frmPatient frm = new frmPatient(1);
-            frm.ShowDialog();
+            new frmPatient(1).Show();
             this.Hide();
         }
 
@@ -110,9 +105,8 @@ namespace Computer_Science_Project_Medical_System
 
         private void btnDoctorSkip_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmDoctor frmDoctor = new frmDoctor(5);
-            frmDoctor.Show();
+            new frmDoctor(5).Show();
+            this.Dispose();
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         public void Appointments()
         {
             Doctor doctorLoggedIn = new Doctor(UserID);
-            string Query;
+            string Query = null;
             switch (combobox1state) 
             {
                 //Case Today will get all appointments on the current day
@@ -47,17 +47,16 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
                     Query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
                 //Case This week will get all appointments from the next 7 days
-                case "This week":
-                    Query = "Select * FROM tbl_appointments WHERE [Date Start] >= '" + DateTime.Now.ToString("d") + "' AND [Date Start] <= '" + DateTime.Now.AddDays(7).ToString() + "'";
+                case "This Week":
+                    Query = "Select * FROM tbl_appointments WHERE [Date Start] >= '" + DateTime.Now.ToString("d") + "' AND [Date Start] <= '" + DateTime.Now.AddDays(7).ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
-                //Case This month will get the remaining appointments in the month
+                //Case This month will get the appointments within a months time
                 case "This Month":
+                    Query = "Select * FROM tbl_appointments WHERE [Date Start] >= '" + DateTime.Now.ToString("d") + "' AND [Date Start] <= '" + DateTime.Now.AddMonths(1).ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
                 //Case All will get all the appointments
                 case "All":
-                    break;
-                default:
-                    Query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    Query = "Select * FROM tbl_appointments WHERE [DoctorID] = '" + doctorLoggedIn.doctorid + "'";
                     break;
             }
             fillDataGrid(Query);
@@ -69,6 +68,12 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         {
             combobox1state = comboBox1.Text.ToString();
             label1.Text = combobox1state;
+            Appointments();
+        }
+
+        private void lblClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

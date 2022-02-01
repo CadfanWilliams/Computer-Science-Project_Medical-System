@@ -5,10 +5,10 @@ namespace Computer_Science_Project_Medical_System
 {
     class Doctor
     {
+        #region variables
         //Connection to database
         SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
-        //
-        //Fields
+        
         public int doctorid;
         public string forename;
         public string surname;
@@ -22,21 +22,16 @@ namespace Computer_Science_Project_Medical_System
         public string postcode;
         public string specialty;
         public int Userid;
-
-        //
-        //Constructors
-        public Doctor()
-        {
-
-        }
+        #endregion
+        #region constructors
         public Doctor(int userid)
         {
             this.Userid = userid;
             getDoctorDetails();
         }
-        //
-        //methods
-        //
+        #endregion
+        #region methods
+
         public void getDoctorDetails()
         {
             //Get details of the doctor
@@ -70,6 +65,6 @@ namespace Computer_Science_Project_Medical_System
             //Saves the doctors details/ Appends the details
             //string query = "UPDATE Doctor(Forename, Surname, Gender, DOB, Email, Phonenumber, Addressline1, Addressline2, Addressline3, Postcode, Specialty) VALUES () WHERE Docid ='" + doctorid + "'";
         }
-
+        #endregion
     }
 }

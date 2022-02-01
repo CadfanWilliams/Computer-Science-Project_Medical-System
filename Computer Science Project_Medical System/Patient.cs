@@ -5,10 +5,10 @@ namespace Computer_Science_Project_Medical_System
 {
     class Patient
     {
+        #region variables
         //Connection to database
         SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
-        //
-        // Fields
+
         public int patientid;
         public string forename;
         public string surname;
@@ -21,17 +21,15 @@ namespace Computer_Science_Project_Medical_System
         public string addressline3;
         public string postcode;
         public int Userid;
-
-        //
-        //Constructors
+        #endregion
+        #region constructors
         public Patient(int userid)
         {
             this.Userid = userid;
             getPatientDetails();
         }
-        //
-        //Methods
-        //
+        #endregion
+        #region methods
         public void getPatientDetails()
         {
             //Gets the details of the patient
@@ -59,7 +57,7 @@ namespace Computer_Science_Project_Medical_System
             }
             DataReader.Close();
         }
-
+        #endregion
     }
 
 }
