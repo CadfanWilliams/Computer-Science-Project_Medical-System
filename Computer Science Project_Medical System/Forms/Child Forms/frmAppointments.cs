@@ -58,6 +58,9 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
                 case "All":
                     Query = "Select * FROM tbl_appointments WHERE [DoctorID] = '" + doctorLoggedIn.doctorid + "'";
                     break;
+                default:
+                    Query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    break;
             }
             fillDataGrid(Query);
 

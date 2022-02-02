@@ -106,7 +106,7 @@ namespace Computer_Science_Project_Medical_System
         private void btnDoctorSkip_Click(object sender, EventArgs e)
         {
             new frmDoctor(5).Show();
-            this.Dispose();
+            this.Hide();
         }
     }
 }
