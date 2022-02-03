@@ -11,7 +11,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         public int UserID;
         public int DoctorID;
         public string combobox1state;
-        string connectionString = @"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;";
+        string connectionString = "Server=tcp:medicalsystem.database.windows.net,1433;Initial Catalog=MedicalSystem;Persist Security Info=False;User ID=Cadfan;Password=Pysgotwr6352;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         public frmAppointments(int userid)
         {       
             InitializeComponent();
@@ -44,22 +44,22 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             {
                 //Case Today will get all appointments on the current day
                 case "Today" :
-                    Query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    Query = "SELECT * FROM tbl_appointments WHERE [Date] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
                 //Case This week will get all appointments from the next 7 days
                 case "This Week":
-                    Query = "Select * FROM tbl_appointments WHERE [Date Start] >= '" + DateTime.Now.ToString("d") + "' AND [Date Start] <= '" + DateTime.Now.AddDays(7).ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    Query = "Select * FROM tbl_appointments WHERE [Date] >= '" + DateTime.Now.ToString("d") + "' AND [Date] <= '" + DateTime.Now.AddDays(7).ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
                 //Case This month will get the appointments within a months time
                 case "This Month":
-                    Query = "Select * FROM tbl_appointments WHERE [Date Start] >= '" + DateTime.Now.ToString("d") + "' AND [Date Start] <= '" + DateTime.Now.AddMonths(1).ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    Query = "Select * FROM tbl_appointments WHERE [Date] >= '" + DateTime.Now.ToString("d") + "' AND [Date] <= '" + DateTime.Now.AddMonths(1).ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
                 //Case All will get all the appointments
                 case "All":
                     Query = "Select * FROM tbl_appointments WHERE [DoctorID] = '" + doctorLoggedIn.doctorid + "'";
                     break;
                 default:
-                    Query = "SELECT * FROM tbl_appointments WHERE [Date Start] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
+                    Query = "SELECT * FROM tbl_appointments WHERE [Date] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
             }
             fillDataGrid(Query);
