@@ -13,11 +13,11 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         public string combobox1state;
         string connectionString = "Server=tcp:medicalsystem.database.windows.net,1433;Initial Catalog=MedicalSystem;Persist Security Info=False;User ID=Cadfan;Password=Pysgotwr6352;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         public frmAppointments(int userid)
-        {       
+        {
             InitializeComponent();
             this.UserID = userid;
             Appointments();
-            
+
         }
 
         #region methods
@@ -40,10 +40,10 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         {
             Doctor doctorLoggedIn = new Doctor(UserID);
             string Query = null;
-            switch (combobox1state) 
+            switch (combobox1state)
             {
                 //Case Today will get all appointments on the current day
-                case "Today" :
+                case "Today":
                     Query = "SELECT * FROM tbl_appointments WHERE [Date] = '" + DateTime.Now.ToString("d") + "' AND DoctorID = '" + doctorLoggedIn.doctorid + "'";
                     break;
                 //Case This week will get all appointments from the next 7 days

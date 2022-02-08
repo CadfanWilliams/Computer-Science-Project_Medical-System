@@ -25,7 +25,7 @@ namespace Computer_Science_Project_Medical_System
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
             new frmRegister().Show();
-            this.Dispose();
+            this.Hide();
         }
         // 
         private void btnLogin_Click(object sender, EventArgs e)
