@@ -97,7 +97,7 @@ namespace Computer_Science_Project_Medical_System
 
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
-            new frmPatient(1).Show();
+            new frmPatient(7).Show();
             this.Hide();
         }
 
