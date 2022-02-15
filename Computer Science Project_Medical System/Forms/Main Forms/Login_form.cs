@@ -2,6 +2,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Computer_Science_Project_Medical_System.Forms.Main_Forms;
 
 
 

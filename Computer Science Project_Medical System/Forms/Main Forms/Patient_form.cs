@@ -1,84 +1,59 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using Computer_Science_Project_Medical_System.Forms.Child_Forms.PatientChildForms;
 
-
-namespace Computer_Science_Project_Medical_System
+namespace Computer_Science_Project_Medical_System.Forms.Main_Forms
 {
     public partial class frmPatient : Form
     {
-
-
-        //fields
-        public int patientid;
-        public string forename;
-        public string surname;
-        public string gender;
-        public string dob;
-        public string email;
-        public string phonenumber;
-        public string addressline1;
-        public string addressline2;
-        public string addressline3;
-        public string postcode;
-        public int Userid;
-        //methods
-
+        #region Variables
+        public int UserID;
+        //field for the active child form
+        private Form activeForm = null;
+        #endregion
         public frmPatient(int userid)
         {
             InitializeComponent();
-            Userid = userid;
-            getPatientDetails();
-            setPatientDetails();
-
+            this.UserID = userid;
+            Patient patientLoggedIn = new Patient(userid);
+            welcomeLbl.Text = welcomeLbl.Text +  " " + patientLoggedIn.forename;
         }
-
-        //Closes the application
-        private void btnExitPatient_Click(object sender, EventArgs e)
+        private void btnExitDoctor_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
-            getPatientDetails();
         }
-        //Sets the details of the patient to the labels on the form
-        public void setPatientDetails()
+        public void openChildForm(Form childForm)
         {
-
-            lblForename.Text = "Welcome " + forename + " " + surname;
-            patientid1.Text = patientid.ToString();
-            label12.Text = forename;
-            label13.Text = surname;
-            label14.Text = gender;
-            label15.Text = dob;
-            label16.Text = email;
-            label17.Text = phonenumber;
-            label18.Text = addressline1;
-            label19.Text = addressline2;
-            label20.Text = addressline3;
-            label21.Text = postcode;
-
-        }
-        //gets the details of the patient logging in from tbl_patients
-        public void getPatientDetails()
-        {
-            Patient loggedin = new Patient(Userid);
-            forename = loggedin.forename;
-            surname = loggedin.surname;
-            gender = loggedin.gender;
-            dob = loggedin.dob;
-            email = loggedin.email;
-            phonenumber = loggedin.phonenumber;
-            addressline1 = loggedin.addressline1;
-            addressline2 = loggedin.addressline2;
-            addressline3 = loggedin.addressline3;
-            postcode = loggedin.postcode;
-
-
+            //method for opening a form onto a panel
+            //for it to be called = openChildForm(new frmAppointment()); - example
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.None;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
 
         }
 
-        private void lblEdit_Click(object sender, EventArgs e)
+        private void btnDetails_Click(object sender, EventArgs e)
         {
+            openChildForm(new frmPatientDetails(UserID));
+        }
 
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmAppointmentsPatient(UserID));
         }
     }
 }
