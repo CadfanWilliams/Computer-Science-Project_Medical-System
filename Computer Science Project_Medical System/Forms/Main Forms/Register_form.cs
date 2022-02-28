@@ -61,6 +61,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
         private void CheckbxShowPas_CheckedChanged(object sender, EventArgs e)
         {
+            //will make the password field visible and not visible
             if (CheckbxShowPas.Checked)
             {
                 txtPassword.PasswordChar = '\0';
@@ -75,6 +76,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            //Will clear the text fields
             txtUsername.Text = "";
             txtPassword.Text = "";
             txtComPassword.Text = "";
@@ -83,6 +85,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
         private void label2_Click(object sender, EventArgs e)
         {
+            //takes you back to login form
             new frmLogin().Show();
             this.Hide();
         }

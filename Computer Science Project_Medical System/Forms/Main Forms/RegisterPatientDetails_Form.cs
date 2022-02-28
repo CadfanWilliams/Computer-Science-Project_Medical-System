@@ -38,6 +38,7 @@ namespace Computer_Science_Project_Medical_System.Forms
 
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
+                    //depending on usertype will insert the record
                     if (usertype == "Patient")
                     {
                         cmd.CommandText = "insert into tbl_patients ([Forename], [Surname], [Gender], [DOB], [Email], [Phonenumber], [Addressline1], [Addressline2], [Addressline3], [Postcode],[Userid]) values ('" + txtFirstname.Text + "','" + txtSurname.Text + "','" + comboBox1.SelectedValue + "','" + dtpDob.Value.Date.ToString() + "','" + txtEmail.Text + "','" + txtPhone.Text + "','" + txtAddress1.Text + "','" + txtAddress2.Text + "','" + txtAddress3.Text + "','" + txtPostcode.Text + "','" + Userid + "')";
@@ -65,6 +66,7 @@ namespace Computer_Science_Project_Medical_System.Forms
         //Presence Check
         public bool checkpresence()
         {
+            //basic presence check
             if (txtFirstname.Text == null || txtSurname.Text == null || txtEmail.Text == null || txtPhone.Text == null || txtAddress1.Text == null
              || txtAddress2.Text == null || txtAddress3.Text == null || txtPostcode.Text == null || dtpDob == null || comboBox1 == null)
             {
@@ -75,6 +77,7 @@ namespace Computer_Science_Project_Medical_System.Forms
         }
         public void getuserid(string username1)
         {
+            //this will get the user id of the user creating account so it can link the two tables together using USERID
             con.Open();
 
             SqlCommand cmd = new SqlCommand();
