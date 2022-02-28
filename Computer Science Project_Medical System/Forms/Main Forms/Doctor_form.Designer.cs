@@ -34,13 +34,13 @@
             this.btnDetails = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.welcomeLbl = new System.Windows.Forms.Label();
-            this.userPicture = new System.Windows.Forms.PictureBox();
             this.btnExitDoctor = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.userPicture = new System.Windows.Forms.PictureBox();
             this.pnlDoctor1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDoctor1
@@ -118,16 +118,6 @@
             this.welcomeLbl.TabIndex = 1;
             this.welcomeLbl.Text = "Welcome";
             // 
-            // userPicture
-            // 
-            this.userPicture.Dock = System.Windows.Forms.DockStyle.Top;
-            this.userPicture.Location = new System.Drawing.Point(0, 0);
-            this.userPicture.Name = "userPicture";
-            this.userPicture.Size = new System.Drawing.Size(180, 155);
-            this.userPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPicture.TabIndex = 0;
-            this.userPicture.TabStop = false;
-            // 
             // btnExitDoctor
             // 
             this.btnExitDoctor.BackColor = System.Drawing.Color.DimGray;
@@ -161,6 +151,17 @@
             this.panel2.Size = new System.Drawing.Size(820, 31);
             this.panel2.TabIndex = 4;
             // 
+            // userPicture
+            // 
+            this.userPicture.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userPicture.Image = global::Computer_Science_Project_Medical_System.Properties.Resources.Doctoricon;
+            this.userPicture.Location = new System.Drawing.Point(0, 0);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(180, 155);
+            this.userPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPicture.TabIndex = 0;
+            this.userPicture.TabStop = false;
+            // 
             // frmDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,8 +177,8 @@
             this.Text = "Doctor_form";
             this.pnlDoctor1.ResumeLayout(false);
             this.pnlDoctor1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.ResumeLayout(false);
 
         }

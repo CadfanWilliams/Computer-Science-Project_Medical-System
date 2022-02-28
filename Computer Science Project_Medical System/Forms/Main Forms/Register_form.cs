@@ -14,8 +14,7 @@ namespace Computer_Science_Project_Medical_System.Forms
         public string UserType = "Patient";
         //
         //Connection to database
-        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
-        SqlDataAdapter da = new SqlDataAdapter();
+        SqlConnection con = new SqlConnection("Server = tcp:medicalsystem.database.windows.net, 1433; Initial Catalog = MedicalSystem; Persist Security Info=False;User ID = Cadfan; Password=Pysgotwr6352;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30;");
 
         private void btnRegister_Click(object sender, EventArgs e)
         {

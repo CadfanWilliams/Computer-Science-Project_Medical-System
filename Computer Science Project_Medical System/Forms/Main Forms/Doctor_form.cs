@@ -5,19 +5,7 @@ namespace Computer_Science_Project_Medical_System
 {
     public partial class frmDoctor : Form
     {
-        //feilds
-        //Fields For the doctor class
-        public int doctorid;
-        public string forename;
-        public string surname;
-        public string gender;
-        public string dob;
-        public string email;
-        public string phonenumber;
-        public string addressline1;
-        public string addressline2;
-        public string addressline3;
-        public string postcode;
+
         public int Userid;
         //Field for active form 
         private Form activeForm = null;
@@ -46,7 +34,7 @@ namespace Computer_Science_Project_Medical_System
         }
         private void btnAppointments_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmAppointments(Userid));
+            openChildForm(new frmAppointmentsDoctor(Userid));
         }
 
         public void openChildForm(Form childForm)

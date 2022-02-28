@@ -2,6 +2,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Computer_Science_Project_Medical_System.Forms.Main_Forms;
 
 
 
@@ -25,7 +26,7 @@ namespace Computer_Science_Project_Medical_System
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
             new frmRegister().Show();
-            this.Dispose();
+            this.Hide();
         }
         // 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -96,7 +97,7 @@ namespace Computer_Science_Project_Medical_System
 
         private void btnPatientSkip_Click(object sender, EventArgs e)
         {
-            new frmPatient(1).Show();
+            new frmPatient(7).Show();
             this.Hide();
         }
 
