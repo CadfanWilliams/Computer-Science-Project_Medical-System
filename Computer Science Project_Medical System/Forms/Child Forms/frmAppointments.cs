@@ -26,6 +26,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         {
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
+                //Fills the data grid
                 sqlcon.Open();
                 SqlDataAdapter sqlda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();
@@ -69,6 +70,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //when the combobox is changed it will set the new state then refill the datatable using the new state
             combobox1state = comboBox1.Text.ToString();
             label1.Text = combobox1state;
             Appointments();

@@ -34,16 +34,18 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
             txtSpecialty.ReadOnly = false;
             //allows users to save the details
             btn_save.Enabled = true;
-
+            //doesnt work as intended ATM
         }
         private void btn_save_Click(object sender, EventArgs e)
         {
+            //also doesnt work
             btn_save.Enabled = false;
         }
         private void setDetails()
         {
             //Initiate Doctor class instance
             Doctor loggedin = new Doctor(userid);
+            //fills in the text fields with data
             txtForename.Text = loggedin.forename;
             txtSurname.Text = loggedin.surname;
             txtGender.Text = loggedin.gender;
