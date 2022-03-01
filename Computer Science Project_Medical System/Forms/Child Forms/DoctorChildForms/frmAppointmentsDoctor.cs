@@ -32,7 +32,6 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
-                dataGridView1.
                 sqlcon.Close();
                 sqlda.Dispose();
             }

@@ -67,5 +67,13 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms.PatientChild
             combobox1state = comboBox1.Text.ToString();
             Appointments();
         }
+
+        private void btnCancelAppointment_Click(object sender, EventArgs e)
+        {
+           new CancelAppointmentPopupBox().ShowDialog();
+           Appointments();
+
+            
+        }
     }
 }
