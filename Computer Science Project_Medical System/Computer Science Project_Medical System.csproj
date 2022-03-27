@@ -81,11 +81,23 @@
     <Compile Include="Forms\Child Forms\DoctorChildForms\frmDoctorDetails.Designer.cs">
       <DependentUpon>frmDoctorDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Child Forms\PatientChildForms\CancelAppointmentPopupBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Child Forms\PatientChildForms\CancelAppointmentPopupBox.Designer.cs">
+      <DependentUpon>CancelAppointmentPopupBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Child Forms\PatientChildForms\frmAppointmentsPatient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Child Forms\PatientChildForms\frmAppointmentsPatient.Designer.cs">
       <DependentUpon>frmAppointmentsPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Child Forms\PatientChildForms\frmBookAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Child Forms\PatientChildForms\frmBookAppointment.Designer.cs">
+      <DependentUpon>frmBookAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Child Forms\PatientChildForms\frmPatientDetails.cs">
       <SubType>Form</SubType>
@@ -132,8 +144,14 @@
     <EmbeddedResource Include="Forms\Child Forms\DoctorChildForms\frmDoctorDetails.resx">
       <DependentUpon>frmDoctorDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Child Forms\PatientChildForms\CancelAppointmentPopupBox.resx">
+      <DependentUpon>CancelAppointmentPopupBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Child Forms\PatientChildForms\frmAppointmentsPatient.resx">
       <DependentUpon>frmAppointmentsPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Child Forms\PatientChildForms\frmBookAppointment.resx">
+      <DependentUpon>frmBookAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Child Forms\PatientChildForms\frmPatientDetails.resx">
       <DependentUpon>frmPatientDetails.cs</DependentUpon>

@@ -42,8 +42,6 @@
             this.lblDob = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
-            this.txtSpecialty = new System.Windows.Forms.TextBox();
-            this.lblSpecialty = new System.Windows.Forms.Label();
             this.txtAdd3 = new System.Windows.Forms.TextBox();
             this.lblAdd3 = new System.Windows.Forms.Label();
             this.txtAdd1 = new System.Windows.Forms.TextBox();
@@ -80,7 +78,7 @@
             this.txtPatientID.BackColor = System.Drawing.Color.Silver;
             this.txtPatientID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPatientID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPatientID.Location = new System.Drawing.Point(285, 346);
+            this.txtPatientID.Location = new System.Drawing.Point(38, 349);
             this.txtPatientID.Multiline = true;
             this.txtPatientID.Name = "txtPatientID";
             this.txtPatientID.ReadOnly = true;
@@ -90,7 +88,7 @@
             // lblPatientID
             // 
             this.lblPatientID.AutoSize = true;
-            this.lblPatientID.Location = new System.Drawing.Point(282, 326);
+            this.lblPatientID.Location = new System.Drawing.Point(35, 329);
             this.lblPatientID.Name = "lblPatientID";
             this.lblPatientID.Size = new System.Drawing.Size(54, 13);
             this.lblPatientID.TabIndex = 88;
@@ -199,27 +197,6 @@
             this.lblSurname.Size = new System.Drawing.Size(49, 13);
             this.lblSurname.TabIndex = 78;
             this.lblSurname.Text = "Surname";
-            // 
-            // txtSpecialty
-            // 
-            this.txtSpecialty.BackColor = System.Drawing.Color.Silver;
-            this.txtSpecialty.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSpecialty.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpecialty.Location = new System.Drawing.Point(38, 346);
-            this.txtSpecialty.Multiline = true;
-            this.txtSpecialty.Name = "txtSpecialty";
-            this.txtSpecialty.ReadOnly = true;
-            this.txtSpecialty.Size = new System.Drawing.Size(216, 28);
-            this.txtSpecialty.TabIndex = 77;
-            // 
-            // lblSpecialty
-            // 
-            this.lblSpecialty.AutoSize = true;
-            this.lblSpecialty.Location = new System.Drawing.Point(35, 326);
-            this.lblSpecialty.Name = "lblSpecialty";
-            this.lblSpecialty.Size = new System.Drawing.Size(50, 13);
-            this.lblSpecialty.TabIndex = 76;
-            this.lblSpecialty.Text = "Specialty";
             // 
             // txtAdd3
             // 
@@ -344,8 +321,6 @@
             this.Controls.Add(this.lblDob);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.lblSurname);
-            this.Controls.Add(this.txtSpecialty);
-            this.Controls.Add(this.lblSpecialty);
             this.Controls.Add(this.txtAdd3);
             this.Controls.Add(this.lblAdd3);
             this.Controls.Add(this.txtAdd1);
@@ -379,8 +354,6 @@
         private System.Windows.Forms.Label lblDob;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.TextBox txtSpecialty;
-        private System.Windows.Forms.Label lblSpecialty;
         private System.Windows.Forms.TextBox txtAdd3;
         private System.Windows.Forms.Label lblAdd3;
         private System.Windows.Forms.TextBox txtAdd1;
