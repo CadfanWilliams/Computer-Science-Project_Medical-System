@@ -11,7 +11,7 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms
         public int UserID;
         public int DoctorID;
         public string combobox1state;
-        string connectionString = "Server=tcp:medicalsystem.database.windows.net,1433;Initial Catalog=MedicalSystem;Persist Security Info=False;User ID=Cadfan;Password=Pysgotwr6352;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        string connectionString = @"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;";
         public frmAppointmentsDoctor(int userid)
         {
             InitializeComponent();

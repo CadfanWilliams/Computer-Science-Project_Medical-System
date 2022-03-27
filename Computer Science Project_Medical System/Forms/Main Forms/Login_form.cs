@@ -19,8 +19,8 @@ namespace Computer_Science_Project_Medical_System
         }
 
         //Connection to database
-        //SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
-        SqlConnection con = new SqlConnection("Server=tcp:medicalsystem.database.windows.net,1433;Initial Catalog=MedicalSystem;Persist Security Info=False;User ID=Cadfan;Password=Pysgotwr6352;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=MedicalSystem;Trusted_Connection=True;");
+        //SqlConnection con = new SqlConnection("Server=tcp:medicalsystem.database.windows.net,1433;Initial Catalog=MedicalSystem;Persist Security Info=False;User ID=Cadfan;Password=Pysgotwr6352;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         //
         //Opens register form
         private void lblCreateAccount_Click(object sender, EventArgs e)
@@ -62,8 +62,6 @@ namespace Computer_Science_Project_Medical_System
                 else
                 {
                     MessageBox.Show("Invalid Login", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtUsername.Text = "";
-                    txtPassword.Text = "";
                     txtUsername.Focus();
 
                     //closes reader if no login is returned
@@ -106,7 +104,7 @@ namespace Computer_Science_Project_Medical_System
 
         private void btnDoctorSkip_Click(object sender, EventArgs e)
         {
-            new frmDoctor(1).Show();
+            new frmDoctor(5).Show();
             this.Hide();
         }
     }
