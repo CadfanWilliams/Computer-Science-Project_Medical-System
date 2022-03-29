@@ -96,9 +96,16 @@ namespace Computer_Science_Project_Medical_System.Forms
             con.Close();
         }
 
-
-
-
-
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtAddress1.Clear();
+            txtAddress2.Clear();
+            txtAddress3.Clear();
+            txtEmail.Clear();
+            txtFirstname.Clear();
+            txtPhone.Clear();
+            txtPostcode.Clear();
+            txtSurname.Clear();
+        }
     }
 }
