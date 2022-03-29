@@ -334,6 +334,7 @@ namespace Computer_Science_Project_Medical_System.Forms
             this.btnClear.TabIndex = 24;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // RegisterPatientDetails_Form
             // 
