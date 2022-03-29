@@ -75,5 +75,11 @@ namespace Computer_Science_Project_Medical_System.Forms.Child_Forms.PatientChild
 
             
         }
+
+        private void btnBookAppointment_Click(object sender, EventArgs e)
+        {
+            Patient patientLoggedIn = new Patient(UserID);
+            new frmBookAppointment(patientLoggedIn.patientid).ShowDialog();
+        }
     }
 }

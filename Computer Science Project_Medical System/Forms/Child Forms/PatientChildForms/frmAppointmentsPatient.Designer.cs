@@ -70,6 +70,7 @@
             this.btnBookAppointment.TabIndex = 3;
             this.btnBookAppointment.Text = "Book Appointment";
             this.btnBookAppointment.UseVisualStyleBackColor = true;
+            this.btnBookAppointment.Click += new System.EventHandler(this.btnBookAppointment_Click);
             // 
             // btnCancelAppointment
             // 

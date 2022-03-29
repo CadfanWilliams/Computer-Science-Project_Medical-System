@@ -30,12 +30,14 @@
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboTimeStart = new System.Windows.Forms.ComboBox();
             this.lblTimeStart = new System.Windows.Forms.Label();
             this.lblTimeEnd = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboTimeEnd = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnConfirmAppointment = new System.Windows.Forms.Button();
+            this.btnCancelBooking = new System.Windows.Forms.Button();
+            this.comboDoctorID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -54,23 +56,24 @@
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "Date";
             // 
-            // comboBox1
+            // comboTimeStart
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "09:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.comboTimeStart.FormattingEnabled = true;
+            this.comboTimeStart.Items.AddRange(new object[] {
+            "09.00",
+            "10.00",
+            "11.00",
+            "12.00",
+            "13.00",
+            "14.00",
+            "15.00",
+            "16.00",
+            "17.00"});
+            this.comboTimeStart.Location = new System.Drawing.Point(25, 100);
+            this.comboTimeStart.Name = "comboTimeStart";
+            this.comboTimeStart.Size = new System.Drawing.Size(121, 21);
+            this.comboTimeStart.TabIndex = 2;
+            this.comboTimeStart.SelectedIndexChanged += new System.EventHandler(this.comboTimeStart_SelectedIndexChanged);
             // 
             // lblTimeStart
             // 
@@ -86,17 +89,17 @@
             this.lblTimeEnd.AutoSize = true;
             this.lblTimeEnd.Location = new System.Drawing.Point(165, 84);
             this.lblTimeEnd.Name = "lblTimeEnd";
-            this.lblTimeEnd.Size = new System.Drawing.Size(52, 13);
+            this.lblTimeEnd.Size = new System.Drawing.Size(50, 13);
             this.lblTimeEnd.TabIndex = 4;
-            this.lblTimeEnd.Text = "Time End";
+            this.lblTimeEnd.Text = "DoctorID";
             // 
-            // comboBox3
+            // comboTimeEnd
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(168, 46);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 3;
+            this.comboTimeEnd.FormattingEnabled = true;
+            this.comboTimeEnd.Location = new System.Drawing.Point(168, 46);
+            this.comboTimeEnd.Name = "comboTimeEnd";
+            this.comboTimeEnd.Size = new System.Drawing.Size(121, 21);
+            this.comboTimeEnd.TabIndex = 3;
             // 
             // label1
             // 
@@ -107,24 +110,48 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Time End";
             // 
-            // textBox1
+            // btnConfirmAppointment
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 5;
+            this.btnConfirmAppointment.Location = new System.Drawing.Point(253, 183);
+            this.btnConfirmAppointment.Name = "btnConfirmAppointment";
+            this.btnConfirmAppointment.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmAppointment.TabIndex = 6;
+            this.btnConfirmAppointment.Text = "Confirm";
+            this.btnConfirmAppointment.UseVisualStyleBackColor = true;
+            this.btnConfirmAppointment.Click += new System.EventHandler(this.btnConfirmAppointment_Click);
+            // 
+            // btnCancelBooking
+            // 
+            this.btnCancelBooking.Location = new System.Drawing.Point(172, 183);
+            this.btnCancelBooking.Name = "btnCancelBooking";
+            this.btnCancelBooking.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelBooking.TabIndex = 6;
+            this.btnCancelBooking.Text = "Cancel";
+            this.btnCancelBooking.UseVisualStyleBackColor = true;
+            this.btnCancelBooking.Click += new System.EventHandler(this.btnCancelBooking_Click);
+            // 
+            // comboDoctorID
+            // 
+            this.comboDoctorID.FormattingEnabled = true;
+            this.comboDoctorID.Location = new System.Drawing.Point(168, 100);
+            this.comboDoctorID.Name = "comboDoctorID";
+            this.comboDoctorID.Size = new System.Drawing.Size(121, 21);
+            this.comboDoctorID.TabIndex = 2;
+            this.comboDoctorID.SelectedIndexChanged += new System.EventHandler(this.comboTimeStart_SelectedIndexChanged);
             // 
             // frmBookAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 218);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCancelBooking);
+            this.Controls.Add(this.btnConfirmAppointment);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTimeEnd);
             this.Controls.Add(this.lblTimeStart);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboTimeEnd);
+            this.Controls.Add(this.comboDoctorID);
+            this.Controls.Add(this.comboTimeStart);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "frmBookAppointment";
@@ -138,11 +165,13 @@
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboTimeStart;
         private System.Windows.Forms.Label lblTimeStart;
         private System.Windows.Forms.Label lblTimeEnd;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboTimeEnd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnConfirmAppointment;
+        private System.Windows.Forms.Button btnCancelBooking;
+        private System.Windows.Forms.ComboBox comboDoctorID;
     }
 }
