@@ -28,7 +28,7 @@ namespace Computer_Science_Project_Medical_System.Forms
         private void btnRegister_Click(object sender, EventArgs e)
         {
 
-            if (checkpresence())
+            if (validation())
             {
 
                 try
@@ -63,16 +63,23 @@ namespace Computer_Science_Project_Medical_System.Forms
         }
 
         //Presence Check
-        public bool checkpresence()
+        public bool validation()
         {
             //basic presence check
             if (txtFirstname.Text == null || txtSurname.Text == null || txtEmail.Text == null || txtPhone.Text == null || txtAddress1.Text == null
              || txtAddress2.Text == null || txtAddress3.Text == null || txtPostcode.Text == null || dtpDob == null || comboBox1 == null)
             {
-                MessageBox.Show("You must fill all the boxes");
+                MessageBox.Show("All fields must be filled");
                 return false;
             }
-            else { return true; }
+            
+            if(comboBox1.Text != "Male" || comboBox1.Text != "Female")
+            {
+                MessageBox.Show("Gender must be male or female");
+                return false;
+            }
+
+            return true;
         }
         public void getuserid(string username1)
         {

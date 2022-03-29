@@ -66,7 +66,7 @@
             // btn_edit
             // 
             this.btn_edit.BackColor = System.Drawing.Color.White;
-            this.btn_edit.Location = new System.Drawing.Point(542, 96);
+            this.btn_edit.Location = new System.Drawing.Point(543, 96);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(224, 28);
             this.btn_edit.TabIndex = 90;
