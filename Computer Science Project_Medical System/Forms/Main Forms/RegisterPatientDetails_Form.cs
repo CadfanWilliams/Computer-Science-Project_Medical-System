@@ -73,7 +73,11 @@ namespace Computer_Science_Project_Medical_System.Forms
                 return false;
             }
             
-            if(comboBox1.Text != "Male" || comboBox1.Text != "Female")
+            if(comboBox1.Text == "Male" || comboBox1.Text == "Female")
+            {
+                return true;
+            }
+            else
             {
                 MessageBox.Show("Gender must be male or female");
                 return false;

@@ -52,16 +52,19 @@
             this.lblGender = new System.Windows.Forms.Label();
             this.txtForename = new System.Windows.Forms.TextBox();
             this.lblForename = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(542, 146);
+            this.btn_save.Enabled = false;
+            this.btn_save.Location = new System.Drawing.Point(543, 145);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(224, 28);
+            this.btn_save.Size = new System.Drawing.Size(109, 28);
             this.btn_save.TabIndex = 91;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_edit
             // 
@@ -72,11 +75,13 @@
             this.btn_edit.TabIndex = 90;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // txtPatientID
             // 
             this.txtPatientID.BackColor = System.Drawing.Color.Silver;
             this.txtPatientID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPatientID.Enabled = false;
             this.txtPatientID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatientID.Location = new System.Drawing.Point(38, 349);
             this.txtPatientID.Multiline = true;
@@ -98,6 +103,7 @@
             // 
             this.txtPostcode.BackColor = System.Drawing.Color.Silver;
             this.txtPostcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPostcode.Enabled = false;
             this.txtPostcode.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPostcode.Location = new System.Drawing.Point(285, 296);
             this.txtPostcode.Multiline = true;
@@ -118,11 +124,11 @@
             // 
             this.txtAdd2.BackColor = System.Drawing.Color.Silver;
             this.txtAdd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdd2.Enabled = false;
             this.txtAdd2.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdd2.Location = new System.Drawing.Point(285, 246);
             this.txtAdd2.Multiline = true;
             this.txtAdd2.Name = "txtAdd2";
-            this.txtAdd2.ReadOnly = true;
             this.txtAdd2.Size = new System.Drawing.Size(216, 28);
             this.txtAdd2.TabIndex = 85;
             // 
@@ -139,11 +145,11 @@
             // 
             this.txtPhonenumber.BackColor = System.Drawing.Color.Silver;
             this.txtPhonenumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhonenumber.Enabled = false;
             this.txtPhonenumber.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhonenumber.Location = new System.Drawing.Point(285, 196);
             this.txtPhonenumber.Multiline = true;
             this.txtPhonenumber.Name = "txtPhonenumber";
-            this.txtPhonenumber.ReadOnly = true;
             this.txtPhonenumber.Size = new System.Drawing.Size(216, 28);
             this.txtPhonenumber.TabIndex = 83;
             // 
@@ -160,11 +166,11 @@
             // 
             this.txtDob.BackColor = System.Drawing.Color.Silver;
             this.txtDob.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDob.Enabled = false;
             this.txtDob.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDob.Location = new System.Drawing.Point(285, 146);
             this.txtDob.Multiline = true;
             this.txtDob.Name = "txtDob";
-            this.txtDob.ReadOnly = true;
             this.txtDob.Size = new System.Drawing.Size(216, 28);
             this.txtDob.TabIndex = 81;
             // 
@@ -181,11 +187,11 @@
             // 
             this.txtSurname.BackColor = System.Drawing.Color.Silver;
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSurname.Enabled = false;
             this.txtSurname.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.Location = new System.Drawing.Point(285, 96);
             this.txtSurname.Multiline = true;
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.ReadOnly = true;
             this.txtSurname.Size = new System.Drawing.Size(216, 28);
             this.txtSurname.TabIndex = 79;
             // 
@@ -202,6 +208,7 @@
             // 
             this.txtAdd3.BackColor = System.Drawing.Color.Silver;
             this.txtAdd3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdd3.Enabled = false;
             this.txtAdd3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdd3.Location = new System.Drawing.Point(38, 296);
             this.txtAdd3.Multiline = true;
@@ -222,11 +229,11 @@
             // 
             this.txtAdd1.BackColor = System.Drawing.Color.Silver;
             this.txtAdd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdd1.Enabled = false;
             this.txtAdd1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdd1.Location = new System.Drawing.Point(38, 246);
             this.txtAdd1.Multiline = true;
             this.txtAdd1.Name = "txtAdd1";
-            this.txtAdd1.ReadOnly = true;
             this.txtAdd1.Size = new System.Drawing.Size(216, 28);
             this.txtAdd1.TabIndex = 73;
             // 
@@ -243,11 +250,11 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.Silver;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(38, 196);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(216, 28);
             this.txtEmail.TabIndex = 71;
             // 
@@ -264,11 +271,11 @@
             // 
             this.txtGender.BackColor = System.Drawing.Color.Silver;
             this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGender.Enabled = false;
             this.txtGender.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.Location = new System.Drawing.Point(38, 146);
             this.txtGender.Multiline = true;
             this.txtGender.Name = "txtGender";
-            this.txtGender.ReadOnly = true;
             this.txtGender.Size = new System.Drawing.Size(216, 28);
             this.txtGender.TabIndex = 69;
             // 
@@ -285,11 +292,11 @@
             // 
             this.txtForename.BackColor = System.Drawing.Color.Silver;
             this.txtForename.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtForename.Enabled = false;
             this.txtForename.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtForename.Location = new System.Drawing.Point(38, 97);
             this.txtForename.Multiline = true;
             this.txtForename.Name = "txtForename";
-            this.txtForename.ReadOnly = true;
             this.txtForename.Size = new System.Drawing.Size(216, 28);
             this.txtForename.TabIndex = 67;
             // 
@@ -302,11 +309,23 @@
             this.lblForename.TabIndex = 66;
             this.lblForename.Text = "Forename";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Enabled = false;
+            this.btnCancel.Location = new System.Drawing.Point(658, 145);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(109, 28);
+            this.btnCancel.TabIndex = 91;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmPatientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.txtPatientID);
@@ -364,5 +383,6 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.TextBox txtForename;
         private System.Windows.Forms.Label lblForename;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
