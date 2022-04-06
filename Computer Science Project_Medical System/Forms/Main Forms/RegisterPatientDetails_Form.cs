@@ -66,8 +66,8 @@ namespace Computer_Science_Project_Medical_System.Forms
         public bool validation()
         {
             //basic presence check
-            if (txtFirstname.Text == null || txtSurname.Text == null || txtEmail.Text == null || txtPhone.Text == null || txtAddress1.Text == null
-             || txtAddress2.Text == null || txtAddress3.Text == null || txtPostcode.Text == null || dtpDob == null || comboBox1 == null)
+            if (txtFirstname.Text == "" || txtSurname.Text == "" || txtEmail.Text == "" || txtPhone.Text == "" || txtAddress1.Text == ""
+             || txtAddress2.Text == "" || txtAddress3.Text == "" || txtPostcode.Text == "" || dtpDob == null || comboBox1 == null)
             {
                 MessageBox.Show("All fields must be filled");
                 return false;
@@ -82,8 +82,6 @@ namespace Computer_Science_Project_Medical_System.Forms
                 MessageBox.Show("Gender must be male or female");
                 return false;
             }
-
-            return true;
         }
         public void getuserid(string username1)
         {
