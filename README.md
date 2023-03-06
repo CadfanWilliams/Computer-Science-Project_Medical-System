@@ -4,3 +4,4 @@
 # Needs updating and finishing
 
 The main goal of this project was to enable me to have a project I could learn from 
+This is an abandoned project 
